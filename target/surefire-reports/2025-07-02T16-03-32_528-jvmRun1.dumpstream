@@ -1,0 +1,8 @@
+# Created at 2025-07-02T16:03:33.896
+
+The following methods have cyclic dependencies:
+TestFirst.firstTest()[pri:0, instance:demoQA.TestFirst@5ae50ce6]
+TestFirst.secondTest()[pri:0, instance:demoQA.TestFirst@5ae50ce6]
+TestFirst.ThridTest()[pri:0, instance:demoQA.TestFirst@5ae50ce6]
+
+

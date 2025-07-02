@@ -4,7 +4,7 @@ package demoQA;
 import org.testng.annotations.*;
 
 
-public class test2 {
+public class TestSecond {
     @Test
     public void sampleTest() {
         System.out.println("Ini test method2");

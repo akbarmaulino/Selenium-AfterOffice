@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite1" class="navigator-link ">
-                    <span>C:\File Kerja\QA\Self Development Eagle Team\Selenium\demoqawebsite\src\test\java\resources\test.xml</span>
+                    <span>C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\src\test\java\resources\test.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,17 @@
                     <div class="method-list-content passed suite-Suite1">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="demoQA.test" class="method navigator-link" hash-for-method="sampleTest">sampleTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite1" title="demoQA.TestFirst" class="method navigator-link" hash-for-method="ThridTest">ThridTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="demoQA.TestFirst" class="method navigator-link" hash-for-method="firstTest">firstTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="demoQA.TestFirst" class="method navigator-link" hash-for-method="secondTest">secondTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite1 -->
@@ -121,14 +131,28 @@
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">demoQA.test</span>
+              <span class="class-name">demoQA.TestFirst</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="sampleTest">
-                  </a> <!-- sampleTest -->
-                  <span class="method-name">sampleTest</span>
+                  <a name="ThridTest">
+                  </a> <!-- ThridTest -->
+                  <span class="method-name">ThridTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="firstTest">
+                  </a> <!-- firstTest -->
+                  <span class="method-name">firstTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="secondTest">
+                  </a> <!-- secondTest -->
+                  <span class="method-name">secondTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,16 +160,16 @@
         </div> <!-- panel Suite1 -->
         <div panel-name="test-xml-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\File Kerja\QA\Self Development Eagle Team\Selenium\demoqawebsite\src\test\java\resources\test.xml</span>
+            <span class="header-content">C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\src\test\java\resources\test.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;simpleDemoQa&quot; verbose=&quot;0&quot;&gt;
+&lt;suite parallel=&quot;methods&quot; name=&quot;Suite1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;simpleDemoQa&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;demoQA.test&quot;/&gt;
+      &lt;class name=&quot;demoQA.TestFirst&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- simpleDemoQa --&gt;
 &lt;/suite&gt; &lt;!-- Suite1 --&gt;
@@ -185,16 +209,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sampleTest')
-data.setCell(0, 2, 'demoQA.test')
-data.setCell(0, 3, 4);
+data.setCell(0, 1, 'firstTest')
+data.setCell(0, 2, 'demoQA.TestFirst')
+data.setCell(0, 3, 1028);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'secondTest')
+data.setCell(1, 2, 'demoQA.TestFirst')
+data.setCell(1, 3, 1011);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'ThridTest')
+data.setCell(2, 2, 'demoQA.TestFirst')
+data.setCell(2, 3, 1010);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 ms</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -220,43 +252,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">demoQA.test</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeSuite</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">38 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">80 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">105 ms</span>
-              </div> <!-- configuration-method before -->
+              <div class="chronological-class-name">demoQA.TestFirst</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">sampleTest</span>
-                <span class="method-start">108 ms</span>
+                <span class="method-name">firstTest</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">118 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">119 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">121 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">177 ms</span>
-              </div> <!-- configuration-suite after -->
+              <div class="test-method">
+                <span class="method-name">secondTest</span>
+                <span class="method-start">1041 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ThridTest</span>
+                <span class="method-start">2057 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

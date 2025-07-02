@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="0.895" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="3.811" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\demoqawebsite\target\test-classes;C:\File Kerja\QA\Self Development Eagle Team\Selenium\demoqawebsite\target\classes;C:\Users\Yantrisnandra Akbar\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
+    <property name="java.class.path" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\target\test-classes;C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\target\classes;C:\Users\Yantrisnandra Akbar\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ID"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\Yantrisnandra Akbar\AppData\Local\Temp\surefire13144400777175938278\surefirebooter-20250620214451699_3.jar C:\Users\Yantrisnandra Akbar\AppData\Local\Temp\surefire13144400777175938278 2025-06-20T21-44-51_399-jvmRun1 surefire-20250620214451699_1tmp surefire_0-20250620214451699_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Yantrisnandra Akbar\AppData\Local\Temp\surefire8370330019751366074\surefirebooter-20250702160510000_3.jar C:\Users\Yantrisnandra Akbar\AppData\Local\Temp\surefire8370330019751366074 2025-07-02T16-05-09_699-jvmRun1 surefire-20250702160510000_1tmp surefire_0-20250702160510000_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\demoqawebsite\target\test-classes;C:\File Kerja\QA\Self Development Eagle Team\Selenium\demoqawebsite\target\classes;C:\Users\Yantrisnandra Akbar\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
+    <property name="surefire.test.class.path" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\target\test-classes;C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\target\classes;C:\Users\Yantrisnandra Akbar\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Yantrisnandra Akbar"/>
     <property name="user.language" value="en"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2024-07-16"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\demoqawebsite"/>
+    <property name="basedir" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Yantrisnandra Akbar\AppData\Local\Temp\surefire13144400777175938278\surefirebooter-20250620214451699_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Yantrisnandra Akbar\AppData\Local\Temp\surefire8370330019751366074\surefirebooter-20250702160510000_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -44,7 +44,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\YANTRI~1\AppData\Local\Temp\"/>
     <property name="java.version" value="17.0.12"/>
-    <property name="user.dir" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\demoqawebsite"/>
+    <property name="user.dir" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -56,16 +56,23 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="sampleTest" classname="demoQA.test" time="0.006">
-    <system-out><![CDATA[Before Suite
-Before Test
-Before Class
-Before Method
-Ini test method
+  <testcase name="firstTest" classname="demoQA.TestFirst" time="1.035">
+    <system-out><![CDATA[Hello World
+0
 ]]></system-out>
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 ]]></system-err>
+  </testcase>
+  <testcase name="secondTest" classname="demoQA.TestFirst" time="1.012">
+    <system-out><![CDATA[Hello World 2
+1
+]]></system-out>
+  </testcase>
+  <testcase name="ThridTest" classname="demoQA.TestFirst" time="1.014">
+    <system-out><![CDATA[Hello World 3
+3
+]]></system-out>
   </testcase>
 </testsuite>

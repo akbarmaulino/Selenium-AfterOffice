@@ -4,7 +4,7 @@
 <suite name="Suite1" verbose="1" parallel="true" thread-count="5">
   <test name="simpleDemoQa">
     <classes>
-       <class name="demoQA.TestFirst"/>
+       <class name="testng.demoQA.TestFirst"/>
        <!-- <class name="demoQA.TestSecond"/>
        <class name="demoQA.TestDataProvider"/>
       <class name="demoQA.RetryTest"/>

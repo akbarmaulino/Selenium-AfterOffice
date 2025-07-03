@@ -33,7 +33,7 @@
           <configuration>
             <!-- <forkCount>0</forkCount> Somehow kalo gabisa di run -->
             <suiteXmlFiles>
-                <suiteXmlFiles>src/test/java/resources/test.xml</suiteXmlFiles>
+                <suiteXmlFiles>src/test/resources/test.xml</suiteXmlFiles>
             </suiteXmlFiles>
           </configuration>
         </plugin>

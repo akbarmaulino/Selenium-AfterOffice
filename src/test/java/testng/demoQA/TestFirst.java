@@ -1,4 +1,4 @@
-package demoQA;
+package testng.demoQA;
 
 
 import org.testng.Assert;

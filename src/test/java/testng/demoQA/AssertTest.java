@@ -1,4 +1,4 @@
-package testng.demoQA;
+package testNG.demoQA;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import testng.data.Prodcut;
+import testNG.data.Prodcut;
 
 public class AssertTest {
     @Test

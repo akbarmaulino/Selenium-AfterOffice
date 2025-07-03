@@ -1,4 +1,4 @@
-package testng.data;
+package testNG.data;
 
 public class Prodcut {
     private String name;

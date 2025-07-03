@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-03T16:47:32 WIB" name="Rest Assured Suites" finished-at="2025-07-03T16:47:35 WIB" duration-ms="2916">
+  <suite started-at="2025-07-03T18:36:59 ICT" name="Rest Assured Suites" finished-at="2025-07-03T18:37:02 ICT" duration-ms="2508">
     <groups>
     </groups>
-    <test started-at="2025-07-03T16:47:32 WIB" name="Rest Assured Test" finished-at="2025-07-03T16:47:35 WIB" duration-ms="2916">
+    <test started-at="2025-07-03T18:36:59 ICT" name="Rest Assured Test" finished-at="2025-07-03T18:37:02 ICT" duration-ms="2508">
       <class name="restassured.EmployeeTest">
-        <test-method is-config="true" signature="login()[pri:0, instance:restassured.EmployeeTest@50eac852]" started-at="2025-07-03T16:47:25 WIB" name="login" finished-at="2025-07-03T16:47:32 WIB" duration-ms="6553" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:restassured.EmployeeTest@52e6fdee]" started-at="2025-07-03T18:36:56 ICT" name="login" finished-at="2025-07-03T18:36:59 ICT" duration-ms="3459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="getCurrentEmployeeTest()[pri:0, instance:restassured.EmployeeTest@50eac852]" started-at="2025-07-03T16:47:32 WIB" name="getCurrentEmployeeTest" finished-at="2025-07-03T16:47:35 WIB" duration-ms="2846" status="PASS">
+        <test-method signature="getCurrentEmployeeTest()[pri:0, instance:restassured.EmployeeTest@52e6fdee]" started-at="2025-07-03T18:36:59 ICT" name="getCurrentEmployeeTest" finished-at="2025-07-03T18:37:02 ICT" duration-ms="2487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCurrentEmployeeTest -->

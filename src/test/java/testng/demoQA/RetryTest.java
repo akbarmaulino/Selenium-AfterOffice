@@ -1,4 +1,4 @@
-package testng.demoQA;
+package testNG.demoQA;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class RetryTest {
     public static int count = 0;
 
-    @Test(retryAnalyzer = testng.helper.RetrySample.class)
+    @Test(retryAnalyzer = testNG.helper.RetrySample.class)
     public void sampleTest() {
         // Simulate a failure for demonstration purposes
         // if (Math.random() < 0.5) {

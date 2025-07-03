@@ -1,8 +1,8 @@
-package testng.demoQA;
+package testNG.demoQA;
 
 
 import org.testng.annotations.Test;
-import testng.data_provider.DataProvide;
+import testNG.data_provider.DataProvide;
 
 public class TestDataProvider {
     @Test(dataProvider = "data-provider", dataProviderClass = DataProvide.class)

@@ -4,7 +4,7 @@
 <suite name="Rest Assured Suites" verbose="1" parallel="true" thread-count="5">
   <test name="Rest Assured Test">
     <classes>
-       <class name="restassured.EmployeeTest"/>
+       <class name="restassured.AddEmployeeTest"/>
     </classes>
   </test>
 </suite>

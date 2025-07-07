@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-03T18:36:59 ICT" name="Rest Assured Suites" finished-at="2025-07-03T18:37:02 ICT" duration-ms="2508">
+  <suite started-at="2025-07-07T10:07:37 WIB" name="Rest Assured Suites" finished-at="2025-07-07T10:07:43 WIB" duration-ms="5895">
     <groups>
     </groups>
-    <test started-at="2025-07-03T18:36:59 ICT" name="Rest Assured Test" finished-at="2025-07-03T18:37:02 ICT" duration-ms="2508">
-      <class name="restassured.EmployeeTest">
-        <test-method is-config="true" signature="login()[pri:0, instance:restassured.EmployeeTest@52e6fdee]" started-at="2025-07-03T18:36:56 ICT" name="login" finished-at="2025-07-03T18:36:59 ICT" duration-ms="3459" status="PASS">
+    <test started-at="2025-07-07T10:07:37 WIB" name="Rest Assured Test" finished-at="2025-07-07T10:07:43 WIB" duration-ms="5895">
+      <class name="restassured.AddEmployeeTest">
+        <test-method signature="AddNewEmployeeTest()[pri:0, instance:restassured.AddEmployeeTest@67a20f67]" started-at="2025-07-07T10:07:37 WIB" name="AddNewEmployeeTest" finished-at="2025-07-07T10:07:41 WIB" duration-ms="4247" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="getCurrentEmployeeTest()[pri:0, instance:restassured.EmployeeTest@52e6fdee]" started-at="2025-07-03T18:36:59 ICT" name="getCurrentEmployeeTest" finished-at="2025-07-03T18:37:02 ICT" duration-ms="2487" status="PASS">
+        </test-method> <!-- AddNewEmployeeTest -->
+        <test-method signature="LoginEmployeeTest()[pri:0, instance:restassured.AddEmployeeTest@67a20f67]" started-at="2025-07-07T10:07:41 WIB" name="LoginEmployeeTest" finished-at="2025-07-07T10:07:42 WIB" depends-on-methods="restassured.AddEmployeeTest.AddNewEmployeeTest" duration-ms="856" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getCurrentEmployeeTest -->
-      </class> <!-- restassured.EmployeeTest -->
+        </test-method> <!-- LoginEmployeeTest -->
+        <test-method signature="deleteEmployeeTest()[pri:0, instance:restassured.AddEmployeeTest@67a20f67]" started-at="2025-07-07T10:07:42 WIB" name="deleteEmployeeTest" finished-at="2025-07-07T10:07:43 WIB" depends-on-methods="restassured.AddEmployeeTest.LoginEmployeeTest" duration-ms="722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteEmployeeTest -->
+      </class> <!-- restassured.AddEmployeeTest -->
     </test> <!-- Rest Assured Test -->
   </suite> <!-- Rest Assured Suites -->
 </testng-results>

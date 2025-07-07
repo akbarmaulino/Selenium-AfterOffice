@@ -1,65 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="6.365" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="6.618" tests="3" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="20"/>
+    <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\Belajar\Belajar QA\Selenium\Vscode\Selenium-DemoQA\target\test-classes;D:\Belajar\Belajar QA\Selenium\Vscode\Selenium-DemoQA\target\classes;C:\Users\Akbar\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Akbar\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Akbar\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Akbar\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Akbar\.m2\repository\io\rest-assured\rest-assured\5.5.5\rest-assured-5.5.5.jar;C:\Users\Akbar\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\Akbar\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\Akbar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Akbar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Akbar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Akbar\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Akbar\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Akbar\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Akbar\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Akbar\.m2\repository\io\rest-assured\json-path\5.5.5\json-path-5.5.5.jar;C:\Users\Akbar\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\Akbar\.m2\repository\io\rest-assured\rest-assured-common\5.5.5\rest-assured-common-5.5.5.jar;C:\Users\Akbar\.m2\repository\io\rest-assured\xml-path\5.5.5\xml-path-5.5.5.jar;C:\Users\Akbar\.m2\repository\org\apache\commons\commons-lang3\3.16.0\commons-lang3-3.16.0.jar;"/>
+    <property name="java.class.path" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\target\test-classes;C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\target\classes;C:\Users\Yantrisnandra Akbar\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\io\rest-assured\rest-assured\5.5.5\rest-assured-5.5.5.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\io\rest-assured\json-path\5.5.5\json-path-5.5.5.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\io\rest-assured\rest-assured-common\5.5.5\rest-assured-common-5.5.5.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\io\rest-assured\xml-path\5.5.5\xml-path-5.5.5.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\commons\commons-lang3\3.16.0\commons-lang3-3.16.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="user.timezone" value="Asia/Bangkok"/>
+    <property name="user.timezone" value="Asia/Jakarta"/>
     <property name="os.name" value="Windows 11"/>
-    <property name="java.vm.specification.version" value="20"/>
+    <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="US"/>
-    <property name="sun.boot.library.path" value="D:\Aplikasi Donwload\Java\bin"/>
-    <property name="sun.java.command" value="C:\Users\Akbar\AppData\Local\Temp\surefire6941799818450181567\surefirebooter-20250703183655260_3.jar C:\Users\Akbar\AppData\Local\Temp\surefire6941799818450181567 2025-07-03T18-36-55_071-jvmRun1 surefire-20250703183655260_1tmp surefire_0-20250703183655260_2tmp"/>
+    <property name="user.country" value="ID"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\Yantrisnandra Akbar\AppData\Local\Temp\surefire5419871600975618650\surefirebooter-20250707100736157_3.jar C:\Users\Yantrisnandra Akbar\AppData\Local\Temp\surefire5419871600975618650 2025-07-07T10-07-35_884-jvmRun1 surefire-20250707100736157_1tmp surefire_0-20250707100736157_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="D:\Belajar\Belajar QA\Selenium\Vscode\Selenium-DemoQA\target\test-classes;D:\Belajar\Belajar QA\Selenium\Vscode\Selenium-DemoQA\target\classes;C:\Users\Akbar\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Akbar\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Akbar\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Akbar\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Akbar\.m2\repository\io\rest-assured\rest-assured\5.5.5\rest-assured-5.5.5.jar;C:\Users\Akbar\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\Akbar\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\Akbar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Akbar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Akbar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Akbar\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Akbar\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Akbar\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Akbar\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Akbar\.m2\repository\io\rest-assured\json-path\5.5.5\json-path-5.5.5.jar;C:\Users\Akbar\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\Akbar\.m2\repository\io\rest-assured\rest-assured-common\5.5.5\rest-assured-common-5.5.5.jar;C:\Users\Akbar\.m2\repository\io\rest-assured\xml-path\5.5.5\xml-path-5.5.5.jar;C:\Users\Akbar\.m2\repository\org\apache\commons\commons-lang3\3.16.0\commons-lang3-3.16.0.jar;"/>
+    <property name="surefire.test.class.path" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\target\test-classes;C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\target\classes;C:\Users\Yantrisnandra Akbar\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\io\rest-assured\rest-assured\5.5.5\rest-assured-5.5.5.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\io\rest-assured\json-path\5.5.5\json-path-5.5.5.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\io\rest-assured\rest-assured-common\5.5.5\rest-assured-common-5.5.5.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\io\rest-assured\xml-path\5.5.5\xml-path-5.5.5.jar;C:\Users\Yantrisnandra Akbar\.m2\repository\org\apache\commons\commons-lang3\3.16.0\commons-lang3-3.16.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\Akbar"/>
+    <property name="user.home" value="C:\Users\Yantrisnandra Akbar"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2023-04-18"/>
-    <property name="java.home" value="D:\Aplikasi Donwload\Java"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="D:\Belajar\Belajar QA\Selenium\Vscode\Selenium-DemoQA"/>
+    <property name="basedir" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Akbar\AppData\Local\Temp\surefire6941799818450181567\surefirebooter-20250703183655260_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Yantrisnandra Akbar\AppData\Local\Temp\surefire5419871600975618650\surefirebooter-20250707100736157_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="20.0.1+9-29"/>
-    <property name="user.name" value="MyLeptop"/>
-    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+    <property name="user.name" value="Yantrisnandra Akbar"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="file.encoding" value="UTF-8"/>
+    <property name="file.encoding" value="Cp1252"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="C:\Users\Akbar\.m2\repository"/>
+    <property name="localRepository" value="C:\Users\Yantrisnandra Akbar\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\Akbar\AppData\Local\Temp\"/>
-    <property name="java.version" value="20.0.1"/>
-    <property name="user.dir" value="D:\Belajar\Belajar QA\Selenium\Vscode\Selenium-DemoQA"/>
+    <property name="java.io.tmpdir" value="C:\Users\YANTRI~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.12"/>
+    <property name="user.dir" value="C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="D:\Aplikasi Donwload\Java\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Aplikasi Donwload\Java\bin;D:\Aplikasi Donwload\Git\cmd;D:\Aplikasi Donwload\nodejs;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\ASUS\AppData\Local\Android\Sdk\tools;C:\Users\ASUS\AppData\Local\Android\Sdk\platform-tools;C:\Users\ASUS\AppData\Local\Android\Sdk;C:\Users\ASUS\AppData\Local\Android\Sdk\tools;C:\Users\ASUS\AppData\Local\Android\Sdk\platform-tools;C:\Users\ASUS\AppData\Local\Android\Sdk\platform-tools\adb.exe;C:\Users\ASUS\AppData\Local\Android\Sdk\tools\android.bat;C:\Users\ASUS\AppData\Local\Android\Sdk\emulator\emulator.exe;D:\Aplikasi Donwload\nodejs\;D:\Aplikasi Donwload\Golang\bin;D:\Aplikasi Donwload\chromedriver-win64\chromedriver-win64;D:\Aplikasi Donwload\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin;;D:\Aplikasi Donwload\Touch Portal\plugins\adb\platform-tools;C:\Users\Akbar\AppData\Local\Microsoft\WindowsApps;C:\Users\Akbar\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\File Kerja\Aplikasi\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\nodejs\;C:\Program Files\PostgreSQL\17\bin;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Java\jdk-17;C:\File Kerja\Aplikasi\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin;C:\Users\Yantrisnandra Akbar\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Azure Data Studio\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.2.2\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.2\bin;;C:\File Kerja\Aplikasi\Microsoft VS Code\bin;C:\Users\Yantrisnandra Akbar\AppData\Roaming\npm;C:\Program Files\PostgreSQL\17\bin;;c:\Users\Yantrisnandra Akbar\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="20.0.1+9-29"/>
+    <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="64.0"/>
+    <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="getCurrentEmployeeTest" classname="restassured.EmployeeTest" time="2.485">
-    <system-out><![CDATA[Request method:	POST
+  <testcase name="AddNewEmployeeTest" classname="restassured.AddEmployeeTest" time="4.247">
+    <system-out><![CDATA[Add Employee Test
+Request method:	POST
+Request URI:	https://whitesmokehouse.com/webhook/employee/add
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "test999999969@test.com",
+    "password": "test99",
+    "full_name": "fifi noela",
+    "department": "IT",
+    "title": "QA"
+}
+[
+    {
+        "id": 678,
+        "email": "test999999969@test.com",
+        "password_hash": "1d56a580bb00ff669f38e5c1f69b497c",
+        "full_name": "fifi noela",
+        "department": "IT",
+        "title": "QA",
+        "create_at": "2025-07-07T03:07:39.974Z",
+        "update_at": "2025-07-07T03:07:39.974Z"
+    }
+]
+[
+    {
+        "id": 678,
+        "email": "test999999969@test.com",
+        "password_hash": "1d56a580bb00ff669f38e5c1f69b497c",
+        "full_name": "fifi noela",
+        "department": "IT",
+        "title": "QA",
+        "create_at": "2025-07-07T03:07:39.974Z",
+        "update_at": "2025-07-07T03:07:39.974Z"
+    }
+]
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="LoginEmployeeTest" classname="restassured.AddEmployeeTest" time="0.858">
+    <system-out><![CDATA[Login Employee Test
+Request method:	POST
 Request URI:	https://whitesmokehouse.com/webhook/employee/login
 Proxy:			<none>
 Request params:	<none>
@@ -72,26 +122,28 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "email": "test1@test.com",
-    "password": "test"
+    "email": "test999999969@test.com",
+    "password": "test99"
 }
-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk3IiwiaWF0IjoxNzUxNTQyNjIwfQ.XQ0Dof0OAm-yutnWWRoq50yBTq0GGV-Otmz4GqRBWQM
-Request method:	GET
-Request URI:	https://whitesmokehouse.com/webhook/employee/get
+Raw login response: [{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OCIsImlhdCI6MTc1MTg1NzY2Mn0.6lm60oCoIkmEXs_Vdg4KmD6Al72N2u1t3OfV1QY9FzE"}]
+Token (Cleaned): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OCIsImlhdCI6MTc1MTg1NzY2Mn0.6lm60oCoIkmEXs_Vdg4KmD6Al72N2u1t3OfV1QY9FzE
+]]></system-out>
+  </testcase>
+  <testcase name="deleteEmployeeTest" classname="restassured.AddEmployeeTest" time="0.723">
+    <system-out><![CDATA[Delete Employee Test
+Request method:	DELETE
+Request URI:	https://whitesmokehouse.com/webhook/employee/delete
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk3IiwiaWF0IjoxNzUxNTQyNjIwfQ.XQ0Dof0OAm-yutnWWRoq50yBTq0GGV-Otmz4GqRBWQM
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OCIsImlhdCI6MTc1MTg1NzY2Mn0.6lm60oCoIkmEXs_Vdg4KmD6Al72N2u1t3OfV1QY9FzE
 				Accept=*/*
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
+Delete Response: [{"success":true}]
 ]]></system-out>
-    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
-SLF4J(W): Defaulting to no-operation (NOP) logger implementation
-SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-]]></system-err>
   </testcase>
 </testsuite>

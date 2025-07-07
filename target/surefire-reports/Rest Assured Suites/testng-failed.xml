@@ -3,12 +3,13 @@
 <suite parallel="methods" name="Failed suite [Rest Assured Suites]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" parallel="methods" name="Rest Assured Test(failed)" verbose="0">
     <classes>
-      <class name="restassured.EmployeeTest">
+      <class name="restassured.AddEmployeeTest">
         <methods>
-          <include name="login"/>
-          <include name="getCurrentEmployeeTest"/>
+          <include name="LoginEmployeeTest"/>
+          <include name="deleteEmployeeTest"/>
+          <include name="AddNewEmployeeTest"/>
         </methods>
-      </class> <!-- restassured.EmployeeTest -->
+      </class> <!-- restassured.AddEmployeeTest -->
     </classes>
   </test> <!-- Rest Assured Test(failed) -->
 </suite> <!-- Failed suite [Rest Assured Suites] -->

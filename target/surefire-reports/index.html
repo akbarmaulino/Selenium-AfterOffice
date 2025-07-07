@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Rest_Assured_Suites" class="navigator-link ">
-                    <span>D:\Belajar\Belajar QA\Selenium\Vscode\Selenium-DemoQA\src\test\resources\restassured.xml</span>
+                    <span>C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\src\test\resources\restassured.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,17 @@
                     <div class="method-list-content passed suite-Rest_Assured_Suites">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Rest_Assured_Suites" title="restassured.EmployeeTest" class="method navigator-link" hash-for-method="getCurrentEmployeeTest">getCurrentEmployeeTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Rest_Assured_Suites" title="restassured.AddEmployeeTest" class="method navigator-link" hash-for-method="AddNewEmployeeTest">AddNewEmployeeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Rest_Assured_Suites" title="restassured.AddEmployeeTest" class="method navigator-link" hash-for-method="LoginEmployeeTest">LoginEmployeeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Rest_Assured_Suites" title="restassured.AddEmployeeTest" class="method navigator-link" hash-for-method="deleteEmployeeTest">deleteEmployeeTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Rest_Assured_Suites -->
@@ -121,14 +131,28 @@
           <div class="suite-Rest_Assured_Suites-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">restassured.EmployeeTest</span>
+              <span class="class-name">restassured.AddEmployeeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="getCurrentEmployeeTest">
-                  </a> <!-- getCurrentEmployeeTest -->
-                  <span class="method-name">getCurrentEmployeeTest</span>
+                  <a name="AddNewEmployeeTest">
+                  </a> <!-- AddNewEmployeeTest -->
+                  <span class="method-name">AddNewEmployeeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginEmployeeTest">
+                  </a> <!-- LoginEmployeeTest -->
+                  <span class="method-name">LoginEmployeeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteEmployeeTest">
+                  </a> <!-- deleteEmployeeTest -->
+                  <span class="method-name">deleteEmployeeTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +160,7 @@
         </div> <!-- panel Rest_Assured_Suites -->
         <div panel-name="test-xml-Rest_Assured_Suites" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Belajar\Belajar QA\Selenium\Vscode\Selenium-DemoQA\src\test\resources\restassured.xml</span>
+            <span class="header-content">C:\File Kerja\QA\Self Development Eagle Team\Selenium\DemoQA Website\src\test\resources\restassured.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +169,7 @@
 &lt;suite parallel=&quot;methods&quot; name=&quot;Rest Assured Suites&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Rest Assured Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;restassured.EmployeeTest&quot;/&gt;
+      &lt;class name=&quot;restassured.AddEmployeeTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Rest Assured Test --&gt;
 &lt;/suite&gt; &lt;!-- Rest Assured Suites --&gt;
@@ -185,16 +209,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getCurrentEmployeeTest')
-data.setCell(0, 2, 'restassured.EmployeeTest')
-data.setCell(0, 3, 2487);
+data.setCell(0, 1, 'AddNewEmployeeTest')
+data.setCell(0, 2, 'restassured.AddEmployeeTest')
+data.setCell(0, 3, 4247);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'LoginEmployeeTest')
+data.setCell(1, 2, 'restassured.AddEmployeeTest')
+data.setCell(1, 3, 856);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'deleteEmployeeTest')
+data.setCell(2, 2, 'restassured.AddEmployeeTest')
+data.setCell(2, 3, 722);
 window.suiteTableData['Rest_Assured_Suites']= { tableData: data, tableDiv: 'times-div-Rest_Assured_Suites'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Rest_Assured_Suites">
               </div> <!-- times-div-Rest_Assured_Suites -->
             </div> <!-- times-div -->
@@ -220,14 +252,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">restassured.EmployeeTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">login</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
+              <div class="chronological-class-name">restassured.AddEmployeeTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">getCurrentEmployeeTest</span>
-                <span class="method-start">3480 ms</span>
+                <span class="method-name">AddNewEmployeeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">LoginEmployeeTest</span>
+                <span class="method-start">4256 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteEmployeeTest</span>
+                <span class="method-start">5115 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

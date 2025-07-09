@@ -8,8 +8,8 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 public class UpdateUser {
-    private String email_fix = "Valoran01@test.com";
-    private String email_Update = "Valorant01Update.com";
+    private String email_Update = "Valoran01@test.com";
+    private String email_fix = "Valorant01Update.com";
     private String update_fullName = "Test Employee Updated";
     private String expected_department = "IT";
     private String expected_title = "QA";

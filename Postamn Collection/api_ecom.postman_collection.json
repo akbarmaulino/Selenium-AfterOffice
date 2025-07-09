@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "aa2e3f16-2c0e-4992-a8fa-ce8af09ff3e8",
+		"name": "api_ecom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22413622",
+		"_collection_link": "https://www.postman.com/mkhaufillah/learn/collection/i85c86h/api-ecom?action=share&source=collection_link&creator=22413622"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/api/ecom/categories",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"api",
+						"ecom",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/api/ecom/users",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"api",
+						"ecom",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user1@test.com\",\r\n    \"password\": \"inipassword\",\r\n    \"full_name\": \"user fullname\",\r\n    \"phone_number\": \"8888888\",\r\n    \"address\": \"jl. jalan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/api/ecom/user_register",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"api",
+						"ecom",
+						"user_register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users_login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Set token to enviroment\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.environment.set(\"user_jwt_test\", jsonData[0].token);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user1@test.com\",\r\n    \"password\": \"inipassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/api/ecom/user_login",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"api",
+						"ecom",
+						"user_login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users_atc",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user_jwt_test}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"items\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"qty\": 2\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"qty\": 3\r\n        },\r\n        {\r\n            \"product_id\": 7,\r\n            \"qty\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/api/ecom/user_atc",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"api",
+						"ecom",
+						"user_atc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/api/ecom/products",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"api",
+						"ecom",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_carts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user_jwt_test}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/api/ecom/carts",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"api",
+						"ecom",
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clear_cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user_jwt_test}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/api/ecom/clear_cart",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"api",
+						"ecom",
+						"clear_cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user_jwt_test}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"cart_id\": 11,\r\n\t\"payment_method\": \"credit\",\r\n\t\"payment_status\": \"paid\",\r\n\t\"payment_reference\": \"ref73294\",\r\n\t\"shipping_address\": \"jl. jalan\",\r\n\t\"shipping_method\": \"express\",\r\n\t\"shipping_cost\": \"1.00\",\r\n\t\"delivery_status\": \"processing\",\r\n\t\"tracking_number\": \"trk767989\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/api/ecom/update_cart",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"api",
+						"ecom",
+						"update_cart"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

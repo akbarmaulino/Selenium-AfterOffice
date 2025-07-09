@@ -1,0 +1,1414 @@
+{
+	"info": {
+		"_postman_id": "6c48db6e-be3f-4a5c-b7ce-286cf20f7599",
+		"name": "API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22413622",
+		"_collection_link": "https://www.postman.com/mkhaufillah/learn/collection/t1tj5ru/api-testing?action=share&source=collection_link&creator=22413622"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"testregis1@test.com\",\r\n    \"full_name\" : \"Test Register 1\",\r\n    \"password\" : \"12345678A!\",\r\n    \"department\" : \"Finance\",\r\n    \"phone_number\": \"000898987878\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"testregis1@test.com\",\r\n    \"full_name\" : \"Test Register 1\",\r\n    \"password\" : \"12345678A!\",\r\n    \"department\" : \"manager\",\r\n    \"phone_number\": \"000898987878\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 May 2025 13:39:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"ca-ZqxQrZvEagMfuvmMyTozHsuSxFI\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TvVgL7be%2FCOlwg%2BA0FUVX4P6kli2svKhR%2BkawOYs8ChruhE92Gt6zkSs62eNKLZ273FOR3hPL9ru7zTlyIWTRqMXDSkqKej%2FnE16w0Iy6hYBn2Bq6jSFwKXjOQgb%2FoTKaYn56ziG\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "940b48806c7e409a-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"28\",\n    \"email\": \"testregis1@test.com\",\n    \"full_name\": \"Test Register 1\",\n    \"department\": \"manager\",\n    \"phone_number\": \"000898987878\",\n    \"create_at\": \"2025-05-16T13:39:47.949Z\",\n    \"update_at\": \"2025-05-16T13:39:47.949Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// const responseJson = pm.response.json();\r",
+							"// let tokenResponse = responseJson.token;\r",
+							"// pm.environment.set(\"token\", tokenResponse)\r",
+							"\r",
+							"let responseJson = pm.response.json();\r",
+							"let getToken = responseJson.token;\r",
+							"\r",
+							"pm.collectionVariables.set(\"token\", getToken);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"testregis1@test.com\",\r\n    \"password\" : \"12345678A!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"testregis1@test.com\",\r\n    \"password\" : \"12345678A!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 May 2025 13:49:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"83-T9lh5r6g21agw5djvCVB/NJYaLk\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cKNmVuIPAciEqN%2BiCmeAQvs6nez2sIPGB0Xr3fgJaDOAkqQUUIu4ay7QDJn8hkB1m0Q01xngCG0h2OMz0NxwNEsIlB3kzzHbt9oIIDME2xbOwWi2raZ%2BjOc183SX9eYy%2BNYpJdQB\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "940b565678514900-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"{{vault:json-web-token}}\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get List All Object",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"let dataIds = [];\r",
+							"\r",
+							"for (let i = 0; i < jsonData.length; i++) {\r",
+							"    dataIds.push(jsonData[i].id);\r",
+							"}\r",
+							"\r",
+							"const getRandArrIdx = Math.floor(Math.random() * jsonData.length);\r",
+							"const getRandIdValue = dataIds[getRandArrIdx];\r",
+							"\r",
+							"pm.collectionVariables.set(\"dinamicObjectID\", getRandIdValue);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/objects",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"objects"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/objects",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"objects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 May 2025 13:50:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"909-NU/mh8IQf8iGY8OXEAhG/DAjZE0\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=l1JUiBrhMrPjfuHN8zXkJHk%2BLeXsvXUrSn0HROToLynO6dyIV89YllXGa98qm5CtPeujqFYNOqQ0QBUIsER7n4t%2BWhfERJ48WQxtKcEMSM4WNmbj0J0Z3y6AU9zn5wWqWHTqkhW6\"}]}"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "940b5854edd7a077-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 6,\n        \"name\": \"Apple\",\n        \"data\": {\n            \"year\": \"3131\",\n            \"price\": \"1849.99\",\n            \"CPU model\": null,\n            \"Hard disk size\": null,\n            \"color\": null,\n            \"capacity\": 13131,\n            \"screen_size\": 3\n        }\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 15,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 16,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 17,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Apple MacBook Pro 1611-albert12\",\n        \"data\": {\n            \"year\": \"2030\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    }\n]"
+				},
+				{
+					"name": "Exp 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/objects",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"objects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 May 2025 14:09:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"909-NU/mh8IQf8iGY8OXEAhG/DAjZE0\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GNDMd15wxfdopy1z7tAQxPjZGIDD2%2BwSmqOx0kM8CrSaPJBq0qN1IhUOPzf%2Fna9woEaD%2FjH0PJTdLyIDX5BUrl7MzwhouEEJCt86W2OCKRBJFTCLLIaz1Gkl4wSJZ9AEPN1h71tX\"}]}"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "940b737949c9856a-HKG"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 6,\n        \"name\": \"Apple\",\n        \"data\": {\n            \"year\": \"3131\",\n            \"price\": \"1849.99\",\n            \"CPU model\": null,\n            \"Hard disk size\": null,\n            \"color\": null,\n            \"capacity\": 13131,\n            \"screen_size\": 3\n        }\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 15,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 16,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 17,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Apple MacBook Pro 1611-albert12\",\n        \"data\": {\n            \"year\": \"2030\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "List of Objects By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/objects?id={{dinamicObjectID}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"objects"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{dinamicObjectID}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/objects?id={{dinamicObjectID}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"objects"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{dinamicObjectID}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 May 2025 14:09:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"909-NU/mh8IQf8iGY8OXEAhG/DAjZE0\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=l4MezIFqehfgXMoc%2FyZ7oCmsKgciXZbCNnK42%2FgzRzfa%2BxZHteLWVoV%2BbM1k6Qy89EF%2FBKzVVxLHhm2aMILbnQrxnIG5V7Wo2XpiKS235IU8Jywq%2F6hELxcwqDLjRhAAU0VrcqOy\"}]}"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "940b7434dc68856a-HKG"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 6,\n        \"name\": \"Apple\",\n        \"data\": {\n            \"year\": \"3131\",\n            \"price\": \"1849.99\",\n            \"CPU model\": null,\n            \"Hard disk size\": null,\n            \"color\": null,\n            \"capacity\": 13131,\n            \"screen_size\": 3\n        }\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Apple MacBook Pro 1611-albert\",\n        \"data\": {\n            \"year\": \"null\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"null\",\n            \"Hard disk size\": \"null\",\n            \"color\": \"null\",\n            \"capacity\": null,\n            \"screen_size\": null\n        }\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 15,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 16,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 17,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Apple MacBook Pro 16\",\n        \"data\": {\n            \"year\": \"2019\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Apple MacBook Pro 1611-albert12\",\n        \"data\": {\n            \"year\": \"2030\",\n            \"price\": \"1849.99\",\n            \"CPU model\": \"Intel Core i9\",\n            \"Hard disk size\": \"1 TB\",\n            \"color\": \"red\",\n            \"capacity\": 2,\n            \"screen_size\": 14\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Single Object",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/8749129e-f5f7-4ae6-9b03-93be7252443c/api/objects/{{dinamicObjectID}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"8749129e-f5f7-4ae6-9b03-93be7252443c",
+						"api",
+						"objects",
+						"{{dinamicObjectID}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Single Object",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/8749129e-f5f7-4ae6-9b03-93be7252443c/api/objects/{{dinamicObjectID}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"8749129e-f5f7-4ae6-9b03-93be7252443c",
+								"api",
+								"objects",
+								"{{dinamicObjectID}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 May 2025 14:56:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"e2-le57v6mT4njVCfYo/wkp9eu6a00\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2FvdJeI6EtbT5SxoiMm9TZRXEPcEDM2Hr2qGYXUmqd%2FWhvYP66KoIkXkvnJq8z67hJmyPMvbf3b%2B5%2F6w5z%2BCjlyM3Sn1HopCKimP5SHncH5Zryttg8KtlsfxQ0lZDVeZvfzpcj%2FnY\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "940bb8966f23fd1c-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 22,\n    \"name\": \"Acer Aspire Lite AL14-52M-54V4\",\n    \"data\": {\n        \"year\": \"2024\",\n        \"price\": \"7500000\",\n        \"cpu_model\": \"Intel Core i5-1334 CPU @1.30-4.60Ghz\",\n        \"hard_disk_size\": \"512GB SSD M2 NVMe\",\n        \"color\": \"silver\",\n        \"capacity\": 10,\n        \"screen_size\": 14\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Object",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"let objectID = jsonData[0].id;\r",
+							"pm.collectionVariables.set(\"dinamicObjectID\", objectID);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Acer Aspire Lite AL14-52M-54V4\",\r\n    \"data\" : {\r\n        \"year\" : 2024,\r\n        \"price\" : 10000000,\r\n        \"cpu_model\" : \"Intel Core i5-1334 CPU @1.30-4.60Ghz\",\r\n        \"hard_disk_size\" : \"512GB SSD M2 NVMe\",\r\n        \"capacity\" : \"10 cpu\",\r\n        \"screen_size\" : \"14 inch\",\r\n        \"color\" : \"black\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/objects",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"objects"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Acer Aspire Lite AL14-52M-54V4\",\r\n    \"data\" : {\r\n        \"year\" : 2024,\r\n        \"price\" : 10000000,\r\n        \"cpu_model\" : \"Intel Core i5-1334 CPU @1.30-4.60Ghz\",\r\n        \"hard_disk_size\" : \"512GB SSD M2 NVMe\",\r\n        \"capacity\" : \"10 cpu\",\r\n        \"screen_size\" : \"14 inch\",\r\n        \"color\" : \"black\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/objects",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"objects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 May 2025 14:54:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"ef-Mm948TXZ78TiAERTsMurHod/OCE\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=kuFrDxoUPgyh4h3XELE6qch7vVxGQUVrWGCjd19MxbM0JJYJmxHB3c8Ns4cUfXnQCT0V9%2BUV8VfRBDi%2Bam6ytQsd7faMcnn8hGAxSxeGnsWqdbij0eDHwFAYP5ma6XNYalbQ9JfN\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "940bb657a8e2fd1c-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 22,\n        \"name\": \"Acer Aspire Lite AL14-52M-54V4\",\n        \"data\": {\n            \"year\": \"2024\",\n            \"price\": 10000000,\n            \"cpu_model\": \"Intel Core i5-1334 CPU @1.30-4.60Ghz\",\n            \"hard_disk_size\": \"512GB SSD M2 NVMe\",\n            \"color\": \"black\",\n            \"capacity\": \"10 cpu\",\n            \"screen_size\": \"14 inch\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Update Object",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Acer Aspire Lite AL14-52M-54V4\",\r\n    \"data\" : {\r\n        \"year\" : 2024,\r\n        \"price\" : 7500000,\r\n        \"cpu_model\" : \"Intel Core i5-1334 CPU @1.30-4.60Ghz\",\r\n        \"hard_disk_size\" : \"512GB SSD M2 NVMe\",\r\n        \"capacity\" : \"10 cpu\",\r\n        \"screen_size\" : \"14 inch\",\r\n        \"color\" : \"silver\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/37777abe-a5ef-4570-a383-c99b5f5f7906/api/objects/{{dinamicObjectID}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"37777abe-a5ef-4570-a383-c99b5f5f7906",
+						"api",
+						"objects",
+						"{{dinamicObjectID}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Object",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Acer Aspire Lite AL14-52M-54V4\",\r\n    \"data\" : {\r\n        \"year\" : 2024,\r\n        \"price\" : 7500000,\r\n        \"cpu_model\" : \"Intel Core i5-1334 CPU @1.30-4.60Ghz\",\r\n        \"hard_disk_size\" : \"512GB SSD M2 NVMe\",\r\n        \"capacity\" : \"10 cpu\",\r\n        \"screen_size\" : \"14 inch\",\r\n        \"color\" : \"silver\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/37777abe-a5ef-4570-a383-c99b5f5f7906/api/objects/{{dinamicObjectID}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"37777abe-a5ef-4570-a383-c99b5f5f7906",
+								"api",
+								"objects",
+								"{{dinamicObjectID}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 May 2025 14:55:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"ef-Chug8dBEkdJQuscycw1o6/J06MI\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2BVgOk%2FWuJzmkTFr2DHhrzHc2omLO84RAaxdWLa6UHrXVDrcgPe8CX9GG1NTPsJpqPbWcxZppqMmLWMwKxUAuaMKnNN0M94qgVKPKgancKj3%2BxWAi0grmiRMUfpi9tNBkNOE4ckkN\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "940bb7465f50fd1c-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 22,\n        \"name\": \"Acer Aspire Lite AL14-52M-54V4\",\n        \"data\": {\n            \"year\": \"2024\",\n            \"price\": 7500000,\n            \"CPU model\": \"Intel Core i5-1334 CPU @1.30-4.60Ghz\",\n            \"Hard disk size\": \"512GB SSD M2 NVMe\",\n            \"color\": \"silver\",\n            \"capacity\": \"10 cpu\",\n            \"screen_size\": \"14 inch\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Partially Update Object",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Acer Aspire Lite AL14-52M-54V4 2025\",\r\n    \"hard_disk_size\" : \"1 TB SSD M2 NVME\",\r\n    \"screen_size\" : \"15.4 inch\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/39a0f904-b0f2-4428-80a3-391cea5d7d04/api/object/{{dinamicObjectID}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"39a0f904-b0f2-4428-80a3-391cea5d7d04",
+						"api",
+						"object",
+						"{{dinamicObjectID}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error Response",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Acer Aspire Lite AL14-52M-54V4 2025\",\r\n    \"hard_disk_size\" : \"1 TB SSD M2 NVME\",\r\n    \"screen_size\" : \"15.4 inch\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/37777abe-a5ef-4570-a383-c99b5f5f7906/api/object/{{dinamicObjectID}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"37777abe-a5ef-4570-a383-c99b5f5f7906",
+								"api",
+								"object",
+								"{{dinamicObjectID}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 May 2025 15:02:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"18b-IgUEHJMI7bmVQLUScAAqxfpvP9o\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2FibNEgn19CPepTGGFZ1NhwRVsPPC76NZzA5bnOXQqdjjaoerWo%2FYgc9%2BZ1kG3n1MY43Im2q054hLNi7%2BLs1p77nNMz%2BgspUz6gqwwX5NcyckHnkAlY0Izlzb%2FKHSa%2FQvvWTh6mkE\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "940bc22f5efd406a-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 404,\n    \"message\": \"The requested webhook \\\"PATCH 37777abe-a5ef-4570-a383-c99b5f5f7906/api/object/22\\\" is not registered.\",\n    \"hint\": \"The workflow must be active for a production URL to run successfully. You can activate the workflow using the toggle in the top-right of the editor. Note that unlike test URL calls, production URL calls aren't shown on the canvas (only in the executions list)\"\n}"
+				},
+				{
+					"name": "Partially Update Object",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Acer Aspire Lite AL14-52M-54V4 2025\",\r\n    \"hard_disk_size\" : \"1 TB SSD M2 NVME\",\r\n    \"screen_size\" : \"15.4 inch\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/39a0f904-b0f2-4428-80a3-391cea5d7d04/api/object/{{dinamicObjectID}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"39a0f904-b0f2-4428-80a3-391cea5d7d04",
+								"api",
+								"object",
+								"{{dinamicObjectID}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 17 May 2025 06:21:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"cc-FSk+zoZHKZHzrAkP4DBFJcWaGlA\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=E13WjTre39Qxmem3E4bskk2qLIrOMTdnVnfczkVh3VZ6ALEkWDyr3NytXgezIV0%2BT6Jz5OhtFuGkOECfDZdJLZczD1rnwiLIcAKxTxMBGOZCDjQ%3D\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "941103bfaa9c6bb7-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 37,\n    \"name\": \"Acer Aspire Lite AL14-52M-54V4 2025\",\n    \"data\": {\n        \"year\": \"2023\",\n        \"price\": \"1000.87\",\n        \"cpu_model\": \"-\",\n        \"hard_disk_size\": \"1 TB SSD M2 NVME\",\n        \"color\": \"Black\",\n        \"capacity\": \"-\",\n        \"screen_size\": \"15.4 inch\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Object",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/d79a30ed-1066-48b6-83f5-556120afc46f/api/objects/{{dinamicObjectID}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"d79a30ed-1066-48b6-83f5-556120afc46f",
+						"api",
+						"objects",
+						"{{dinamicObjectID}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Object",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/d79a30ed-1066-48b6-83f5-556120afc46f/api/objects/{{dinamicObjectID}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"d79a30ed-1066-48b6-83f5-556120afc46f",
+								"api",
+								"objects",
+								"{{dinamicObjectID}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 18 May 2025 08:07:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"46-c4oaJWpPOGs2jZTXVMMkEJWpT5w\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=KDNNg6yvKPR2kY5LWaC5EROMd%2BpUOeNNds5Fyi2dmpoKrIIax52NJvMmbg9HvJZM2g5NHZ%2BHvTUV%2BPTXF4xzV6YB2HdHbOj4Mbuu2z%2FpWg5utto%3D\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "9419dcd27f8e402f-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"deleted\",\n    \"message\": \"Object with id = 4, has been deleted.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Department",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/department",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"department"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/department",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"department"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 May 2025 14:57:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"d5-PpICPH07klxotTmY1196y5FON6E\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=rqYFxvKm%2Fsk19l5wHNoyLC7hFrc7jw7ogn%2BybGSrLxZZGu9KnVwZB66ps4u%2BbodDAnDmudUOLkbKNKMNJzg%2B7i13h2LY2%2Bkl%2FT4UYNzA0nL%2BeFBhopi%2FLK3l7i9qiDeQGNROtpAI\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "940bbb06b856585b-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"department\": \"manager\"\n    },\n    {\n        \"id\": 2,\n        \"department\": \"marketing\"\n    },\n    {\n        \"id\": 3,\n        \"department\": \"sales\"\n    },\n    {\n        \"id\": 4,\n        \"department\": \"store manager\"\n    },\n    {\n        \"id\": 5,\n        \"department\": \"branch manager\"\n    },\n    {\n        \"id\": 6,\n        \"department\": \"branch manager\"\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://whitesmokehouse.com/webhook"
+		},
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "dinamicObjectID",
+			"value": ""
+		}
+	]
+}

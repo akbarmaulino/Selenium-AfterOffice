@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "905b4130-326f-489b-a393-0ead7bef7bc0",
+		"name": "employee_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22413622",
+		"_collection_link": "https://www.postman.com/mkhaufillah/learn/collection/9hcihbi/employee-api?action=share&source=collection_link&creator=22413622"
+	},
+	"item": [
+		{
+			"name": "add",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test99@test.com\",\r\n    \"password\": \"test\",\r\n    \"full_name\": \"test name\",\r\n    \"department\": \"IT\",\r\n    \"title\": \"QA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/employee/add",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"employee",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{employee_jwt_test}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test1@test.com\",\r\n    \"password\": \"test\",\r\n    \"full_name\": \"fifi noela\",\r\n    \"department\": \"HR\",\r\n    \"title\": \"People Specialist\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/employee/update",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"employee",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Set token to enviroment\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.environment.set(\"employee_jwt_test\", jsonData[0].token);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test1@test.com\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/employee/login",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"employee",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{employee_jwt_test}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/employee/get",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"employee",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{employee_jwt_test}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/employee/delete",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"employee",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/employee/get_all",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"employee",
+						"get_all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://whitesmokehouse.com/webhook/41a9698d-d8b0-42df-9ddc-89c0a1a1aa79/employee/search/E2E Test Full Name",
+					"protocol": "https",
+					"host": [
+						"whitesmokehouse",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"41a9698d-d8b0-42df-9ddc-89c0a1a1aa79",
+						"employee",
+						"search",
+						"E2E Test Full Name"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

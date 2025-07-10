@@ -7,7 +7,7 @@ import io.restassured.http.Header;
 import io.restassured.response.Response;
 
 public class AddEmployeeTest {
-    private final String expected_email = "test00000000@test.com";
+    private final String expected_email = "test00000001@test.com";
     private final String expected_password = "test99";
     private String token;
 

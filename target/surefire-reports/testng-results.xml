@@ -1,25 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-07T10:07:37 WIB" name="Rest Assured Suites" finished-at="2025-07-07T10:07:43 WIB" duration-ms="5895">
+  <suite started-at="2025-07-10T12:27:10 WIB" name="CucumberSuite" finished-at="2025-07-10T12:27:25 WIB" duration-ms="14669">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.runner.cucumberRunner@49139829]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-07-07T10:07:37 WIB" name="Rest Assured Test" finished-at="2025-07-07T10:07:43 WIB" duration-ms="5895">
-      <class name="restassured.AddEmployeeTest">
-        <test-method signature="AddNewEmployeeTest()[pri:0, instance:restassured.AddEmployeeTest@67a20f67]" started-at="2025-07-07T10:07:37 WIB" name="AddNewEmployeeTest" finished-at="2025-07-07T10:07:41 WIB" duration-ms="4247" status="PASS">
+    <test started-at="2025-07-10T12:27:10 WIB" name="Cucumber Test" finished-at="2025-07-10T12:27:25 WIB" duration-ms="14669">
+      <class name="cucumber.runner.cucumberRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.runner.cucumberRunner@49139829]" started-at="2025-07-10T12:27:10 WIB" name="setUpClass" finished-at="2025-07-10T12:27:11 WIB" duration-ms="984" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6e509ffa]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddNewEmployeeTest -->
-        <test-method signature="LoginEmployeeTest()[pri:0, instance:restassured.AddEmployeeTest@67a20f67]" started-at="2025-07-07T10:07:41 WIB" name="LoginEmployeeTest" finished-at="2025-07-07T10:07:42 WIB" depends-on-methods="restassured.AddEmployeeTest.AddNewEmployeeTest" duration-ms="856" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.runner.cucumberRunner@49139829]" started-at="2025-07-10T12:27:11 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T12:27:16 WIB" duration-ms="5065" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create Employee"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee API"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginEmployeeTest -->
-        <test-method signature="deleteEmployeeTest()[pri:0, instance:restassured.AddEmployeeTest@67a20f67]" started-at="2025-07-07T10:07:42 WIB" name="deleteEmployeeTest" finished-at="2025-07-07T10:07:43 WIB" depends-on-methods="restassured.AddEmployeeTest.LoginEmployeeTest" duration-ms="722" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.runner.cucumberRunner@49139829]" started-at="2025-07-10T12:27:16 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T12:27:19 WIB" duration-ms="2266" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login Employee"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee API"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteEmployeeTest -->
-      </class> <!-- restassured.AddEmployeeTest -->
-    </test> <!-- Rest Assured Test -->
-  </suite> <!-- Rest Assured Suites -->
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.runner.cucumberRunner@49139829]" started-at="2025-07-10T12:27:19 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T12:27:20 WIB" duration-ms="921" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update Employee"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.runner.cucumberRunner@49139829]" started-at="2025-07-10T12:27:20 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T12:27:21 WIB" duration-ms="840" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Get Employee"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.runner.cucumberRunner@49139829]" started-at="2025-07-10T12:27:21 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T12:27:25 WIB" duration-ms="4436" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete Employee"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status code does not match expected [300] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status code does not match expected [300] but found [200]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at cucumber.definitions.EmployeeDefinition.theResponseStatusCodeShouldBe(EmployeeDefinition.java:52)
+at ✽.The Response Status Code should be 300(file:///C:/Users/Yantrisnandra%20Akbar/Downloads/Selenium-DemoQA/src/test/java/cucumber/features/Employee.feature:69)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.runner.cucumberRunner@49139829]" started-at="2025-07-10T12:27:25 WIB" name="tearDownClass" finished-at="2025-07-10T12:27:25 WIB" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumber.runner.cucumberRunner -->
+    </test> <!-- Cucumber Test -->
+  </suite> <!-- CucumberSuite -->
 </testng-results>

@@ -1,4 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.618 s -- in TestSuite
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.57 s <<< FAILURE! -- in TestSuite
+cucumber.runner.cucumberRunner.runScenario["Delete Employee", "Employee API"](5) -- Time elapsed: 4.436 s <<< FAILURE!
+java.lang.AssertionError: Status code does not match expected [300] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at cucumber.definitions.EmployeeDefinition.theResponseStatusCodeShouldBe(EmployeeDefinition.java:52)
+	at ✽.The Response Status Code should be 300(file:///C:/Users/Yantrisnandra%20Akbar/Downloads/Selenium-DemoQA/src/test/java/cucumber/features/Employee.feature:69)
+

@@ -6,6 +6,7 @@ testNG\demoQA\TestDataProvider.class
 testNG\data\Prodcut.class
 scenario\RegisterNewEmployee.class
 cucumber\definitions\EmployeeDefinition$2.class
+cucumber\helper\GenerateReport.class
 cucumber\definitions\EmployeeDefinition$1.class
 testNG\demoQA\TestSecond.class
 restassured\StaticVar.class

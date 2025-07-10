@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-CucumberSuite" class="navigator-link">
-              <span class="suite-name border-failed">CucumberSuite</span>
+              <span class="suite-name border-passed">CucumberSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-CucumberSuite" class="hide-methods failed suite-CucumberSuite"> (hide)</a> <!-- hide-methods failed suite-CucumberSuite -->
-                      <a href="#" panel-name="suite-CucumberSuite" class="show-methods failed suite-CucumberSuite"> (show)</a> <!-- show-methods failed suite-CucumberSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-CucumberSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CucumberSuite" title="cucumber.runner.cucumberRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Delete Employee&quot;, &quot;Employee API&quot;)">runScenario("Delete Employee", "Employee API")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-CucumberSuite -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,7 +103,17 @@
                     <div class="method-list-content passed suite-CucumberSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CucumberSuite" title="cucumber.runner.cucumberRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Update Employee&quot;, &quot;Employee API&quot;)">runScenario("Update Employee", "Employee API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-CucumberSuite" title="cucumber.runner.cucumberRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Get Employee&quot;, &quot;Employee API&quot;)">runScenario("Get Employee", "Employee API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CucumberSuite" title="cucumber.runner.cucumberRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Delete Employee&quot;, &quot;Employee API&quot;)">runScenario("Delete Employee", "Employee API")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -128,11 +124,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-CucumberSuite" title="cucumber.runner.cucumberRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login Employee&quot;, &quot;Employee API&quot;)">runScenario("Login Employee", "Employee API")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CucumberSuite" title="cucumber.runner.cucumberRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Update Employee&quot;, &quot;Employee API&quot;)">runScenario("Update Employee", "Employee API")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-CucumberSuite -->
@@ -147,29 +138,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-CucumberSuite" class="panel CucumberSuite">
-          <div class="suite-CucumberSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">cucumber.runner.cucumberRunner</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Delete Employee&quot;, &quot;Employee API&quot;)">
-                  </a> <!-- runScenario("Delete Employee", "Employee API") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Delete Employee","Employee API")</span>
-                  <div class="stack-trace">java.lang.AssertionError: Status code does not match expected [300] but found [200]
-	at cucumber.definitions.EmployeeDefinition.theResponseStatusCodeShouldBe(EmployeeDefinition.java:52)
-	at ✽.The Response Status Code should be 300(file:///C:/Users/Yantrisnandra%20Akbar/Downloads/Selenium-DemoQA/src/test/java/cucumber/features/Employee.feature:69)
-... Removed 6 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CucumberSuite-class-failed -->
           <div class="suite-CucumberSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -178,10 +146,30 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="runScenario(&quot;Update Employee&quot;, &quot;Employee API&quot;)">
+                  </a> <!-- runScenario("Update Employee", "Employee API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Update Employee","Employee API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="runScenario(&quot;Get Employee&quot;, &quot;Employee API&quot;)">
                   </a> <!-- runScenario("Get Employee", "Employee API") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Get Employee","Employee API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Delete Employee&quot;, &quot;Employee API&quot;)">
+                  </a> <!-- runScenario("Delete Employee", "Employee API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Delete Employee","Employee API")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -202,16 +190,6 @@
                   </a> <!-- runScenario("Login Employee", "Employee API") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Login Employee","Employee API")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Update Employee&quot;, &quot;Employee API&quot;)">
-                  </a> <!-- runScenario("Update Employee", "Employee API") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Update Employee","Employee API")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -282,28 +260,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'cucumber.runner.cucumberRunner')
-data.setCell(0, 3, 5065);
+data.setCell(0, 3, 4229);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'cucumber.runner.cucumberRunner')
-data.setCell(1, 3, 4436);
+data.setCell(1, 3, 2527);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'cucumber.runner.cucumberRunner')
-data.setCell(2, 3, 2266);
+data.setCell(2, 3, 802);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'cucumber.runner.cucumberRunner')
-data.setCell(3, 3, 921);
+data.setCell(3, 3, 687);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'cucumber.runner.cucumberRunner')
-data.setCell(4, 3, 840);
+data.setCell(4, 3, 683);
 window.suiteTableData['CucumberSuite']= { tableData: data, tableDiv: 'times-div-CucumberSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-CucumberSuite">
               </div> <!-- times-div-CucumberSuite -->
             </div> <!-- times-div -->
@@ -331,35 +309,37 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">cucumber.runner.cucumberRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@6e509ffa)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@56113384)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Create Employee", "Employee API")</span>
-                <span class="method-start">1001 ms</span>
+                <span class="method-start">814 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login Employee", "Employee API")</span>
-                <span class="method-start">6073 ms</span>
+                <span class="method-start">5049 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Update Employee", "Employee API")</span>
-                <span class="method-start">8342 ms</span>
+                <span class="method-start">7578 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Get Employee", "Employee API")</span>
-                <span class="method-start">9264 ms</span>
+                <span class="method-start">8380 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">runScenario("Delete Employee", "Employee API")</span>
-                <span class="method-start">10104 ms</span>
+                <span class="method-start">9068 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">14549 ms</span>
+                <span class="method-start">9757 ms</span>
               </div> <!-- configuration-class after -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">9876 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

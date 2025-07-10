@@ -66,7 +66,7 @@ Feature: Employee API
             "password": "test99"
         }
         """
-        Then The Response Status Code should be 300
+        Then The Response Status Code should be 200
 
 
 

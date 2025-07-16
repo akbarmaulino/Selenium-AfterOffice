@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.454" tests="5" skipped="0" failures="5" errors="0" timestamp="2025-07-15T13:44:51.053850Z">
+<testcase classname="Employee API" name="Register a new employee" time="0.032">
+<failure/>
+<system-out><![CDATA[
+When Send employee to register with body:...................................undefined
+Then The response status must be 200........................................skipped
+And The response schema should be match with schema "register-schema.json"..skipped
+]]></system-out>
+</testcase>
+<testcase classname="Employee API" name="Login with registered employee" time="0.015">
+<failure/>
+<system-out><![CDATA[
+When Send employee to login with body:......................................undefined
+Then The response status must be 200........................................skipped
+And Save the token from the response to local storage.......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Employee API" name="" time="0.013">
+<failure/>
+<system-out><![CDATA[
+Given Make sure token in local storage not empty............................undefined
+When Send a request to update with body:....................................skipped
+Then The response status must be 200........................................skipped
+And Full name in the response must be "Ini nama yg udh diupdate ya".........skipped
+And Department in the response must be "Tech"...............................skipped
+And Title in the response must be "Backend Engineer"........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Employee API" name="" time="0.036">
+<failure/>
+<system-out><![CDATA[
+Given Make sure token in local storage not empty............................undefined
+When Send a request to get employee.........................................skipped
+Then The response status must be 200........................................skipped
+And Full name in the response must be "Ini nama yg udh diupdate ya".........skipped
+And Department in the response must be "Tech"...............................skipped
+And Title in the response must be "Backend Engineer"........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Employee API" name="" time="0.009">
+<failure/>
+<system-out><![CDATA[
+Given Make sure token in local storage not empty............................undefined
+When Send a request to delete employee......................................skipped
+Then The response status must be 200........................................skipped
+]]></system-out>
+</testcase>
+</testsuite>

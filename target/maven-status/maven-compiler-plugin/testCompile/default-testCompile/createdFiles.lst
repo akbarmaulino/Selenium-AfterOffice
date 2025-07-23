@@ -13,7 +13,10 @@ restassured\StaticVar.class
 testNG\demoQA\AssertTest$1.class
 testNG\helper\RetrySample.class
 restassured\EmployeeTest.class
+context\TestContext.class
+endpoints\Endpoints.class
 scenario\UpdateUser.class
+cucumber\helper\ConfigManager.class
 cucumber\definitions\EmployeeDefinition.class
 cucumber\definitions\EmployeeDefinition$3.class
 schemaValidation\ShecmaValidation.class
@@ -21,4 +24,5 @@ testNG\data_provider\DataProvide.class
 testNG\demoQA\AssertTest.class
 testNG\demoQA\RetryTest.class
 converter\AddEmployeeWithDeserialization.class
+cucumber\definitions\EmployeeDefinitionsRefactor.class
 restassured\AddEmployeeTest.class

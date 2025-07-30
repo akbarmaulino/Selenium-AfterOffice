@@ -57,7 +57,7 @@ public class SeleniumAdvance {
             String idOption = optionPassenger.getAttribute("id");
             List<WebElement> optionDescendant = optionPassenger.findElements(By.xpath("//div[@id='" + idOption + "']//span[contains(@class, 'pax-add')]"));
             for (WebElement optionDescendantPassenger : optionDescendant) {
-                System.out.println(idOption + " ==== " + optionDescendantPassenger.getText());
+                System.out.println(idOption + " = " + optionDescendantPassenger.getText());
             }
             break;
         }

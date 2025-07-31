@@ -55,11 +55,17 @@ public class SeleniumAdvance {
         List<WebElement> dropdownOptions = driver.findElements(By.xpath("//div[@id='divpaxOptions']//child::div[contains(@class, 'ad-row')]"));
         for(WebElement optionPassenger : dropdownOptions) {
             String idOption = optionPassenger.getAttribute("id");
-            List<WebElement> optionDescendant = optionPassenger.findElements(By.xpath("//div[@id='" + idOption + "']//span[contains(@class, 'pax-add')]"));
-            for (WebElement optionDescendantPassenger : optionDescendant) {
-                System.out.println(idOption + " = " + optionDescendantPassenger.getText());
+            if(idOption == null || idOption.isEmpty()) {
+                List<WebElement> optionDescendant = driver.findElements(By.xpath("//div[@id='" + idOption + "']//descendant::span[contains(@class, 'pax-add')]"));
+                for (int i = 0; i < optionDescendant.size(); i++) {
+                    System.out.println(idOption + " ==== " + i + " ---- " + optionDescendant.get(i).getText());
+                }
+                optionDescendant.get(1).click();
+                break;
+            } else {
+                WebElement btnClose = driver.findElement(By.xpath("//input[@id='btnclosepaxoption']"));
+                btnClose.click();
             }
-            break;
         }
 
         // System.out.println("Selecting passengers...");

@@ -1,63 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-23T18:49:13 WIB" name="Locator Suite" finished-at="2025-07-23T18:49:31 WIB" duration-ms="18121">
+  <suite started-at="2025-08-02T00:08:40 WIB" name="Selenium UI Suite" finished-at="2025-08-02T00:08:43 WIB" duration-ms="2608">
     <groups>
     </groups>
-    <test started-at="2025-07-23T18:49:13 WIB" name="Locator Test" finished-at="2025-07-23T18:49:31 WIB" duration-ms="18121">
-      <class name="selenium.FailedLogin">
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:selenium.FailedLogin@55b699ef]" started-at="2025-07-23T18:49:13 WIB" name="startBrowser" finished-at="2025-07-23T18:49:15 WIB" duration-ms="2464" status="PASS">
+    <test started-at="2025-08-02T00:08:40 WIB" name="Selenium UI Test" finished-at="2025-08-02T00:08:43 WIB" duration-ms="2608">
+      <class name="selenium.Alert">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:selenium.Alert@7c7b252e]" started-at="2025-08-02T00:08:36 WIB" name="startBrowser" finished-at="2025-08-02T00:08:40 WIB" duration-ms="4597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method signature="testFailedLogin()[pri:0, instance:selenium.FailedLogin@55b699ef]" started-at="2025-07-23T18:49:15 WIB" name="testFailedLogin" finished-at="2025-07-23T18:49:19 WIB" duration-ms="3651" status="PASS">
+        <test-method signature="testAlert()[pri:0, instance:selenium.Alert@7c7b252e]" started-at="2025-08-02T00:08:40 WIB" name="testAlert" finished-at="2025-08-02T00:08:43 WIB" duration-ms="2530" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testFailedLogin -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:selenium.FailedLogin@55b699ef]" started-at="2025-07-23T18:49:19 WIB" name="closeBrowser" finished-at="2025-07-23T18:49:19 WIB" duration-ms="398" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- selenium.FailedLogin -->
-      <class name="selenium.ForgotPassword">
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:selenium.ForgotPassword@30c15d8b]" started-at="2025-07-23T18:49:19 WIB" name="startBrowser" finished-at="2025-07-23T18:49:21 WIB" duration-ms="1799" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method signature="clickForgotPassword()[pri:0, instance:selenium.ForgotPassword@30c15d8b]" started-at="2025-07-23T18:49:21 WIB" name="clickForgotPassword" finished-at="2025-07-23T18:49:22 WIB" duration-ms="241" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickForgotPassword -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:selenium.ForgotPassword@30c15d8b]" started-at="2025-07-23T18:49:22 WIB" name="closeBrowser" finished-at="2025-07-23T18:49:22 WIB" duration-ms="379" status="PASS">
+        </test-method> <!-- testAlert -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:selenium.Alert@7c7b252e]" started-at="2025-08-02T00:08:43 WIB" name="closeBrowser" finished-at="2025-08-02T00:08:43 WIB" duration-ms="485" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:selenium.ForgotPassword@30c15d8b]" started-at="2025-07-23T18:49:22 WIB" name="startBrowser" finished-at="2025-07-23T18:49:24 WIB" duration-ms="1725" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method signature="fillAllFields()[pri:0, instance:selenium.ForgotPassword@30c15d8b]" started-at="2025-07-23T18:49:24 WIB" name="fillAllFields" finished-at="2025-07-23T18:49:24 WIB" duration-ms="743" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fillAllFields -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:selenium.ForgotPassword@30c15d8b]" started-at="2025-07-23T18:49:24 WIB" name="closeBrowser" finished-at="2025-07-23T18:49:25 WIB" duration-ms="340" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:selenium.ForgotPassword@30c15d8b]" started-at="2025-07-23T18:49:25 WIB" name="startBrowser" finished-at="2025-07-23T18:49:27 WIB" duration-ms="1820" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method signature="getPasswordAndTryLogin()[pri:0, instance:selenium.ForgotPassword@30c15d8b]" started-at="2025-07-23T18:49:27 WIB" name="getPasswordAndTryLogin" finished-at="2025-07-23T18:49:31 WIB" duration-ms="4145" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPasswordAndTryLogin -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:selenium.ForgotPassword@30c15d8b]" started-at="2025-07-23T18:49:31 WIB" name="closeBrowser" finished-at="2025-07-23T18:49:31 WIB" duration-ms="353" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- selenium.ForgotPassword -->
-    </test> <!-- Locator Test -->
-  </suite> <!-- Locator Suite -->
+      </class> <!-- selenium.Alert -->
+    </test> <!-- Selenium UI Test -->
+  </suite> <!-- Selenium UI Suite -->
 </testng-results>

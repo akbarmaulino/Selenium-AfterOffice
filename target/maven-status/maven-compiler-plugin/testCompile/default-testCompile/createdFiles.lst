@@ -1,4 +1,6 @@
 cucumber\definitions\cucumberDefinitions.class
+selenium\ForgotPassword.class
+selenium\FailedLogin.class
 testNG\demoQA\TestFirst.class
 cucumber\runner\cucumberRunner.class
 converter\LoginEmployeeWithSerilize.class
@@ -12,7 +14,10 @@ testNG\demoQA\TestSecond.class
 restassured\StaticVar.class
 testNG\demoQA\AssertTest$1.class
 testNG\helper\RetrySample.class
+selenium\ChooseColoumn.class
 restassured\EmployeeTest.class
+selenium\SeleniumAdvance.class
+selenium\ChooseDestination.class
 context\TestContext.class
 endpoints\Endpoints.class
 scenario\UpdateUser.class

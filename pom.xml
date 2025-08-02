@@ -100,7 +100,7 @@
             <version>3.5.3</version>
             <configuration>
                 <suiteXmlFiles>
-                    <suiteXmlFile>src/test/resources/locator.xml</suiteXmlFile>
+                <suiteXmlFile>${testng.xml}</suiteXmlFile>
                 </suiteXmlFiles>
                 <testFailureIgnore>true</testFailureIgnore>
             </configuration>

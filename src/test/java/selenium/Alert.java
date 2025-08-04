@@ -1,8 +1,7 @@
 package selenium;
 
 import java.time.Duration;
-import java.util.Iterator;
-import java.util.Set;
+
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -58,6 +57,25 @@ public class Alert {
         //     System.out.println("Main Window: " + mainWindow);
             
         // }
+        wait.until(d -> iframe.isDisplayed());
+        driver.switchTo().frame(iframe); // Switch to the iframe
+        WebElement mainMenuIFrame = driver.findElement(By.xpath("//nav[@class='main-menu']//descendant::a[@text()='Courses']"));
+        wait.until(d -> ExpectedConditions.visibilityOf(mainMenuIFrame));
+        mainMenuIFrame.click(); // Click on the Courses link inside the iframe
+
+        driver.switchTo().defaultContent(); // Switch back to the main content
+
+        WebElement inputAlert = driver.findElement(By.xpath("//input[@id='name']"));
+        wait.until(d -> ExpectedConditions.visibilityOf(inputAlert));
+        inputAlert.sendKeys("Yantrisnandra Akbar");
+        WebElement alertButton = driver.findElement(By.xpath("//input[@id='alertbtn']"));
+        wait.until(d -> ExpectedConditions.elementToBeClickable(alertButton));
+        alertButton.click();
+
+        System.out.println(driver.switchTo().alert().getText());
+        Thread.sleep(2000); // Wait for the alert to appear
+        driver.switchTo().alert().accept(); // Accept the alert
+        
         
         
     }

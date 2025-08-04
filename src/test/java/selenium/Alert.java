@@ -1,11 +1,13 @@
 package selenium;
 
 import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -39,6 +41,27 @@ public class Alert {
         Thread.sleep(2000); // Wait for the alert to appear
         driver.switchTo().alert().accept(); // Accept the alert
     }
+
+    @Test
+    public void testIFrame() throws InterruptedException {
+        WebElement iframe = driver.findElement(By.xpath("//iframe[@id='courses-iframe']"));
+        Actions actions = new Actions(driver);
+        actions.scrollToElement(iframe).perform();
+
+        // Thread.sleep(2000); // Wait for the iframe to be visible
+        
+        // Set<String> window = driver.getWindowHandles();
+        // Iterator<String> it = window.iterator();
+        // String mainWindow ="";
+        // while (it.hasNext()) {
+        //     mainWindow = it.next();
+        //     System.out.println("Main Window: " + mainWindow);
+            
+        // }
+        
+        
+    }
+    
 
     @AfterSuite
     public void closeBrowser() {

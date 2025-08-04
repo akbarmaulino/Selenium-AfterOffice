@@ -3,7 +3,7 @@
 <suite name="Selenium UI Suite" verbose="1" parallel="false">
   <test name="Selenium UI Test">
     <classes>
-      <class name="selenium.Alert"/>
+      <class name="selenium.E2EWebsite"/>
     </classes>
   </test>
 </suite>

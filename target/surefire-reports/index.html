@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Selenium_UI_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Selenium UI Suite</span>
+              <span class="suite-name border-failed">Selenium UI Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Selenium_UI_Suite" class="hide-methods failed suite-Selenium_UI_Suite"> (hide)</a> <!-- hide-methods failed suite-Selenium_UI_Suite -->
+                      <a href="#" panel-name="suite-Selenium_UI_Suite" class="show-methods failed suite-Selenium_UI_Suite"> (show)</a> <!-- show-methods failed suite-Selenium_UI_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Selenium_UI_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Selenium_UI_Suite" title="selenium.E2EWebsite" class="method navigator-link" hash-for-method="verifyOrderCreated">verifyOrderCreated</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Selenium_UI_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,37 @@
                     <div class="method-list-content passed suite-Selenium_UI_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Selenium_UI_Suite" title="selenium.Alert" class="method navigator-link" hash-for-method="testAlert">testAlert</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Selenium_UI_Suite" title="selenium.E2EWebsite" class="method navigator-link" hash-for-method="LoginWebsite">LoginWebsite</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Selenium_UI_Suite" title="selenium.Alert" class="method navigator-link" hash-for-method="testIFrame">testIFrame</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Selenium_UI_Suite" title="selenium.E2EWebsite" class="method navigator-link" hash-for-method="addToCartAndCheckout">addToCartAndCheckout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Selenium_UI_Suite" title="selenium.E2EWebsite" class="method navigator-link" hash-for-method="proceedToCheckout">proceedToCheckout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Selenium_UI_Suite" title="selenium.E2EWebsite" class="method navigator-link" hash-for-method="searchAndViewProduct">searchAndViewProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Selenium_UI_Suite" title="selenium.E2EWebsite" class="method navigator-link" hash-for-method="verifyCheckoutDetails">verifyCheckoutDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Selenium_UI_Suite" title="selenium.E2EWebsite" class="method navigator-link" hash-for-method="verifyOrderConfirmation">verifyOrderConfirmation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Selenium_UI_Suite" title="selenium.E2EWebsite" class="method navigator-link" hash-for-method="verifyProductDetails">verifyProductDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Selenium_UI_Suite -->
@@ -123,24 +162,86 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Selenium_UI_Suite" class="panel Selenium_UI_Suite">
-          <div class="suite-Selenium_UI_Suite-class-passed">
+          <div class="suite-Selenium_UI_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">selenium.Alert</span>
+              <img src="failed.png"/>
+              <span class="class-name">selenium.E2EWebsite</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAlert">
-                  </a> <!-- testAlert -->
-                  <span class="method-name">testAlert</span>
+                  <a name="verifyOrderCreated">
+                  </a> <!-- verifyOrderCreated -->
+                  <span class="method-name">verifyOrderCreated</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h1[contains(translate(normalize-space(.), &apos;ABCDEFGHIJKLMNOPQRSTUVWXYZ&apos;, &apos;abcdefghijklmnopqrstuvwxyz&apos;), &apos;thankyou for the order&apos;)] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\YANTRI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61125/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5fd263c8df6c8b260322898813b889e1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at selenium.E2EWebsite.verifyOrderCreated(E2EWebsite.java:167)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Selenium_UI_Suite-class-failed -->
+          <div class="suite-Selenium_UI_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">selenium.E2EWebsite</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginWebsite">
+                  </a> <!-- LoginWebsite -->
+                  <span class="method-name">LoginWebsite</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testIFrame">
-                  </a> <!-- testIFrame -->
-                  <span class="method-name">testIFrame</span>
+                  <a name="addToCartAndCheckout">
+                  </a> <!-- addToCartAndCheckout -->
+                  <span class="method-name">addToCartAndCheckout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="proceedToCheckout">
+                  </a> <!-- proceedToCheckout -->
+                  <span class="method-name">proceedToCheckout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchAndViewProduct">
+                  </a> <!-- searchAndViewProduct -->
+                  <span class="method-name">searchAndViewProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCheckoutDetails">
+                  </a> <!-- verifyCheckoutDetails -->
+                  <span class="method-name">verifyCheckoutDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyOrderConfirmation">
+                  </a> <!-- verifyOrderConfirmation -->
+                  <span class="method-name">verifyOrderConfirmation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyProductDetails">
+                  </a> <!-- verifyProductDetails -->
+                  <span class="method-name">verifyProductDetails</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -157,7 +258,7 @@
 &lt;suite name=&quot;Selenium UI Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Selenium UI Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;selenium.Alert&quot;/&gt;
+      &lt;class name=&quot;selenium.E2EWebsite&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Selenium UI Test --&gt;
 &lt;/suite&gt; &lt;!-- Selenium UI Suite --&gt;
@@ -197,20 +298,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testAlert')
-data.setCell(0, 2, 'selenium.Alert')
-data.setCell(0, 3, 2584);
+data.setCell(0, 1, 'verifyOrderCreated')
+data.setCell(0, 2, 'selenium.E2EWebsite')
+data.setCell(0, 3, 10100);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testIFrame')
-data.setCell(1, 2, 'selenium.Alert')
-data.setCell(1, 3, 564);
+data.setCell(1, 1, 'verifyCheckoutDetails')
+data.setCell(1, 2, 'selenium.E2EWebsite')
+data.setCell(1, 3, 6985);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addToCartAndCheckout')
+data.setCell(2, 2, 'selenium.E2EWebsite')
+data.setCell(2, 3, 6622);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'searchAndViewProduct')
+data.setCell(3, 2, 'selenium.E2EWebsite')
+data.setCell(3, 3, 4861);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'LoginWebsite')
+data.setCell(4, 2, 'selenium.E2EWebsite')
+data.setCell(4, 3, 3298);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyProductDetails')
+data.setCell(5, 2, 'selenium.E2EWebsite')
+data.setCell(5, 3, 2264);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'proceedToCheckout')
+data.setCell(6, 2, 'selenium.E2EWebsite')
+data.setCell(6, 3, 2261);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyOrderConfirmation')
+data.setCell(7, 2, 'selenium.E2EWebsite')
+data.setCell(7, 3, 2145);
 window.suiteTableData['Selenium_UI_Suite']= { tableData: data, tableDiv: 'times-div-Selenium_UI_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-Selenium_UI_Suite">
               </div> <!-- times-div-Selenium_UI_Suite -->
             </div> <!-- times-div -->
@@ -236,22 +361,48 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">selenium.Alert</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">selenium.E2EWebsite</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startBrowser</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">testAlert</span>
-                <span class="method-start">20236 ms</span>
+                <span class="method-name">LoginWebsite</span>
+                <span class="method-start">30130 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testIFrame</span>
-                <span class="method-start">22829 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyOrderCreated</span>
+                <span class="method-start">33433 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchAndViewProduct</span>
+                <span class="method-start">43553 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyProductDetails</span>
+                <span class="method-start">48422 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addToCartAndCheckout</span>
+                <span class="method-start">50686 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">proceedToCheckout</span>
+                <span class="method-start">57312 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCheckoutDetails</span>
+                <span class="method-start">59576 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyOrderConfirmation</span>
+                <span class="method-start">66565 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">23458 ms</span>
+                <span class="method-start">68831 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

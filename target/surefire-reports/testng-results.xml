@@ -1,29 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-04T07:20:28 WIB" name="Selenium UI Suite" finished-at="2025-08-04T07:20:32 WIB" duration-ms="3274">
+  <suite started-at="2025-08-04T17:00:12 WIB" name="Selenium UI Suite" finished-at="2025-08-04T17:00:51 WIB" duration-ms="38713">
     <groups>
     </groups>
-    <test started-at="2025-08-04T07:20:28 WIB" name="Selenium UI Test" finished-at="2025-08-04T07:20:32 WIB" duration-ms="3274">
-      <class name="selenium.Alert">
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:selenium.Alert@4d5d943d]" started-at="2025-08-04T07:20:08 WIB" name="startBrowser" finished-at="2025-08-04T07:20:28 WIB" duration-ms="20127" status="PASS">
+    <test started-at="2025-08-04T17:00:12 WIB" name="Selenium UI Test" finished-at="2025-08-04T17:00:51 WIB" duration-ms="38713">
+      <class name="selenium.E2EWebsite">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:selenium.E2EWebsite@76505305]" started-at="2025-08-04T16:59:42 WIB" name="startBrowser" finished-at="2025-08-04T17:00:12 WIB" duration-ms="29997" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method signature="testAlert()[pri:0, instance:selenium.Alert@4d5d943d]" started-at="2025-08-04T07:20:28 WIB" name="testAlert" finished-at="2025-08-04T07:20:31 WIB" duration-ms="2584" status="PASS">
+        <test-method signature="LoginWebsite()[pri:0, instance:selenium.E2EWebsite@76505305]" started-at="2025-08-04T17:00:12 WIB" name="LoginWebsite" finished-at="2025-08-04T17:00:15 WIB" duration-ms="3298" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAlert -->
-        <test-method signature="testIFrame()[pri:0, instance:selenium.Alert@4d5d943d]" started-at="2025-08-04T07:20:31 WIB" name="testIFrame" finished-at="2025-08-04T07:20:32 WIB" duration-ms="564" status="PASS">
+        </test-method> <!-- LoginWebsite -->
+        <test-method signature="verifyOrderCreated()[pri:0, instance:selenium.E2EWebsite@76505305]" started-at="2025-08-04T17:00:15 WIB" name="verifyOrderCreated" finished-at="2025-08-04T17:00:26 WIB" duration-ms="10100" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //h1[contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'thankyou for the order')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\YANTRI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61125/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5fd263c8df6c8b260322898813b889e1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h1[contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'thankyou for the order')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\YANTRI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61125/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5fd263c8df6c8b260322898813b889e1
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at selenium.E2EWebsite.verifyOrderCreated(E2EWebsite.java:167)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testIFrame -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:selenium.Alert@4d5d943d]" started-at="2025-08-04T07:20:32 WIB" name="closeBrowser" finished-at="2025-08-04T07:20:32 WIB" duration-ms="420" status="PASS">
+        </test-method> <!-- verifyOrderCreated -->
+        <test-method signature="searchAndViewProduct()[pri:0, instance:selenium.E2EWebsite@76505305]" started-at="2025-08-04T17:00:26 WIB" name="searchAndViewProduct" finished-at="2025-08-04T17:00:30 WIB" depends-on-methods="selenium.E2EWebsite.LoginWebsite" duration-ms="4861" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchAndViewProduct -->
+        <test-method signature="verifyProductDetails()[pri:0, instance:selenium.E2EWebsite@76505305]" started-at="2025-08-04T17:00:30 WIB" name="verifyProductDetails" finished-at="2025-08-04T17:00:33 WIB" depends-on-methods="selenium.E2EWebsite.searchAndViewProduct" duration-ms="2264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductDetails -->
+        <test-method signature="addToCartAndCheckout()[pri:0, instance:selenium.E2EWebsite@76505305]" started-at="2025-08-04T17:00:33 WIB" name="addToCartAndCheckout" finished-at="2025-08-04T17:00:39 WIB" depends-on-methods="selenium.E2EWebsite.verifyProductDetails" duration-ms="6622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartAndCheckout -->
+        <test-method signature="proceedToCheckout()[pri:0, instance:selenium.E2EWebsite@76505305]" started-at="2025-08-04T17:00:39 WIB" name="proceedToCheckout" finished-at="2025-08-04T17:00:42 WIB" depends-on-methods="selenium.E2EWebsite.addToCartAndCheckout" duration-ms="2261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- proceedToCheckout -->
+        <test-method signature="verifyCheckoutDetails()[pri:0, instance:selenium.E2EWebsite@76505305]" started-at="2025-08-04T17:00:42 WIB" name="verifyCheckoutDetails" finished-at="2025-08-04T17:00:49 WIB" depends-on-methods="selenium.E2EWebsite.proceedToCheckout" duration-ms="6985" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCheckoutDetails -->
+        <test-method signature="verifyOrderConfirmation()[pri:0, instance:selenium.E2EWebsite@76505305]" started-at="2025-08-04T17:00:49 WIB" name="verifyOrderConfirmation" finished-at="2025-08-04T17:00:51 WIB" depends-on-methods="selenium.E2EWebsite.verifyCheckoutDetails" duration-ms="2145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOrderConfirmation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:selenium.E2EWebsite@76505305]" started-at="2025-08-04T17:00:51 WIB" name="closeBrowser" finished-at="2025-08-04T17:00:52 WIB" duration-ms="714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- selenium.Alert -->
+      </class> <!-- selenium.E2EWebsite -->
     </test> <!-- Selenium UI Test -->
   </suite> <!-- Selenium UI Suite -->
 </testng-results>

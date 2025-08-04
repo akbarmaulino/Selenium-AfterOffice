@@ -3,13 +3,13 @@
 <suite name="Failed suite [Selenium UI Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="Selenium UI Test(failed)" verbose="0">
     <classes>
-      <class name="selenium.Alert">
+      <class name="selenium.E2EWebsite">
         <methods>
-          <include name="startBrowser"/>
+          <include name="verifyOrderCreated"/>
           <include name="closeBrowser"/>
-          <include name="testAlert"/>
+          <include name="startBrowser"/>
         </methods>
-      </class> <!-- selenium.Alert -->
+      </class> <!-- selenium.E2EWebsite -->
     </classes>
   </test> <!-- Selenium UI Test(failed) -->
 </suite> <!-- Failed suite [Selenium UI Suite] -->

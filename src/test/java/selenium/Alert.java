@@ -28,6 +28,7 @@ public class Alert {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
+    
     @Test
     public void testAlert() throws InterruptedException {
         WebElement inputAlert = driver.findElement(By.xpath("//input[@id='name']"));

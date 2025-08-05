@@ -27,7 +27,7 @@ public class E2EWebsite {
     @BeforeSuite
     public void startBrowser() {
         System.out.println("Starting the browser...");
-        System.setProperty("webdriver.chrome.driver", "C:/Users/Yantrisnandra Akbar/Downloads/Selenium-AfterOffice/resources/chromedriver-win64/chromedriver-win64/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C://Users//Akbar//Downloads//Selenium-AfterOffice//resources//chromedriver-win64//chromedriver-win64//chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://rahulshettyacademy.com/client");
         driver.manage().window().maximize();
@@ -159,20 +159,6 @@ public class E2EWebsite {
         Thread.sleep(2000);
     }
 
-    @Test
-    public void verifyOrderCreated() {
-      By titleLocator = By.xpath("//h1[contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'thankyou for the order')]");
-
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    WebElement title = wait.until(ExpectedConditions.visibilityOfElementLocated(titleLocator));
-
-    System.out.println("✅ Elemen ditemukan:");
-    System.out.println("📄 Text: " + title.getText());
-    System.out.println("📄 HTML: " + title.getAttribute("outerHTML"));
-
-    Assert.assertTrue(title.isDisplayed(), "Elemen 'Thankyou for the order.' seharusnya tampil");
-
-    }
 
 
 

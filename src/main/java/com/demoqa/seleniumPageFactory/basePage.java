@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Wait;
 
 
-public class basePage {
+public abstract class basePage {
     public WebDriver driver;
     public Wait<WebDriver> wait;
     
@@ -12,9 +12,4 @@ public class basePage {
         this.driver = driver;
         this.wait = wait;
     }
-
-
-
-
-    
 }

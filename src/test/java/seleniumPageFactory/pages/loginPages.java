@@ -1,7 +1,10 @@
 package seleniumPageFactory.pages;
 
 import com.demoqa.seleniumPageFactory.basePage;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import seleniumPageFactory.objectRepository.loginObject;
 
@@ -24,7 +27,20 @@ public class loginPages extends basePage {
     }
 
     public void clickLoginButton() {
-        wait.until(d -> loginObject.buttonLogin.isDisplayed());
+    wait.until(ExpectedConditions.elementToBeClickable(loginObject.buttonLogin));
+
+        // Scroll ke tombol pakai JavaScript
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", loginObject.buttonLogin);
+
+        // Tambahkan delay kecil untuk menghindari animasi/overlay
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        // Klik tombol
         loginObject.buttonLogin.click();
     }
 }
+

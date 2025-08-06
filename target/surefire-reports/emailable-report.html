@@ -9,42 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Cucumber Test Suite</th></tr>
-<tr><td><a href="#t0">Cucumber Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">16,138</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Cucumber Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">32,231</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Cucumber Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Cucumber Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">seleniumPageFactory.cucumber.runner.runner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1754517664529</td><td rowspan="1">15761</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Cucumber Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Cucumber Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">seleniumPageFactory.cucumber.runner.runner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1754519835740</td><td rowspan="1">31916</td></tr></tbody>
 </table>
-<h2>Cucumber Test</h2><h3 id="m0">seleniumPageFactory.cucumber.runner.runner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;</td><td>&quot;Checkout Flow&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for seleniumPageFactory.pages.dashboardPages$$Lambda$906/0x00000008012b6668@6f012914 (tried for 5 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at seleniumPageFactory.pages.dashboardPages.doSearch(dashboardPages.java:18)
-	at seleniumPageFactory.cucumber.definitions.checkoutE2E.searchProduct(checkoutE2E.java:51)
-	at ✽.Search product with keyword &quot;ZARA COAT 3&quot; for checkout flow(file:///C:/Users/Akbar/Downloads/Selenium-AfterOffice/src/test/resources/pageFactory/checkout.feature:10)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//section[@id=&apos;sidebar&apos;]//descendant::input[@name=&apos;search&apos;]&quot;}
-  (Session info: chrome=138.0.7204.184)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [252b516d7f4a3700b0e590202127f248, findElement {using=xpath, value=//section[@id=&apos;sidebar&apos;]//descendant::input[@name=&apos;search&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\Akbar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51561}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51561/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 252b516d7f4a3700b0e590202127f248
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy21.isDisplayed(Unknown Source)
-	at seleniumPageFactory.pages.dashboardPages.lambda$doSearch$0(dashboardPages.java:18)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 3 more
-... Removed 3 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Cucumber Test</h2><h3 id="m0">seleniumPageFactory.cucumber.runner.runner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;</td><td>&quot;Checkout Flow&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

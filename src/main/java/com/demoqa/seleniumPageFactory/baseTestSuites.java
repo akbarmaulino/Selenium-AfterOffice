@@ -15,8 +15,7 @@ public abstract class baseTestSuites {
 
     public void setUp(){
         System.out.println("Initializing the base page...");
-        Env config = new Env();
-        System.setProperty("webdriver.chrome.driver", config.driverPath);
+        System.setProperty("webdriver.chrome.driver", Env.driverPath);
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }

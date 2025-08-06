@@ -1,6 +1,8 @@
 package seleniumPageFactory.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 
 import com.demoqa.seleniumPageFactory.basePage;
@@ -15,7 +17,21 @@ public class cartPages extends basePage {
     }
 
     public void clickButtonCheckout() {
-        wait.until(d -> cartObject.buttonCheckout.isDisplayed());
-        cartObject.buttonCheckout.click();
+        // Tunggu sampai tombol benar-benar bisa diklik
+        wait.until(ExpectedConditions.elementToBeClickable(cartObject.buttonCheckout));
+
+        // Scroll ke tombol supaya pasti terlihat
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", cartObject.buttonCheckout);
+
+        // Delay sedikit untuk menghindari race condition animasi (bisa dihapus kalau yakin aman)
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        // Klik tombol dengan JavaScript (paksa)
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cartObject.buttonCheckout);
     }
+
 }

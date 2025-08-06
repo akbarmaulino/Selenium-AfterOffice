@@ -6,6 +6,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -45,11 +46,21 @@ public class hook {
 
         if (System.getProperty("browser").equals("chrome")) {
             System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + Env.driverPath);
+            ChromeOptions options = new ChromeOptions();
+
+            options.addArguments("--headless=new"); // Gunakan new headless mode
+            options.addArguments("--window-size=1920,1080"); // Viewport besar supaya elemen tidak ketutup
+            options.addArguments("--disable-gpu"); // Aman untuk CI server
+            options.addArguments("--no-sandbox"); // Aman untuk container
+            options.addArguments("--disable-dev-shm-usage"); // Aman untuk container
+            hook.driver = new ChromeDriver(options);
+
+
         } else {
             //
         }
 
-        hook.driver = new ChromeDriver();
+        // hook.driver = new ChromeDriver();
         hook.wait = new WebDriverWait(hook.driver, Duration.ofSeconds(5));
 
         // throw new Error("this sample of error");

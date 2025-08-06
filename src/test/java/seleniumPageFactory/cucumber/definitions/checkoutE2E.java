@@ -42,7 +42,8 @@ public class checkoutE2E {
     }
 
     @Then("Click login button for checkout flow")
-    public void clickLoginButton() {
+    public void clickLoginButton() throws InterruptedException {
+        Thread.sleep(3000); // Wait for email and password to be filled
         loginPage.clickLoginButton();
     }
 

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-07T05:01:04 ICT" name="Cucumber Test Suite" finished-at="2025-08-07T05:01:20 ICT" duration-ms="16138">
+  <suite started-at="2025-08-07T05:37:15 ICT" name="Cucumber Test Suite" finished-at="2025-08-07T05:37:47 ICT" duration-ms="32231">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:seleniumPageFactory.cucumber.runner.runner@10683d9d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-08-07T05:01:04 ICT" name="Cucumber Test" finished-at="2025-08-07T05:01:20 ICT" duration-ms="16138">
+    <test started-at="2025-08-07T05:37:15 ICT" name="Cucumber Test" finished-at="2025-08-07T05:37:47 ICT" duration-ms="32231">
       <class name="seleniumPageFactory.cucumber.runner.runner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:seleniumPageFactory.cucumber.runner.runner@10683d9d]" started-at="2025-08-07T05:01:04 ICT" name="setUpClass" finished-at="2025-08-07T05:01:04 ICT" duration-ms="144" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:seleniumPageFactory.cucumber.runner.runner@10683d9d]" started-at="2025-08-07T05:37:15 ICT" name="setUpClass" finished-at="2025-08-07T05:37:15 ICT" duration-ms="135" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2a235b8e]]>
+                <![CDATA[org.testng.TestRunner@7e64c1a9]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:seleniumPageFactory.cucumber.runner.runner@10683d9d]" started-at="2025-08-07T05:01:04 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-07T05:01:20 ICT" duration-ms="15761" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:seleniumPageFactory.cucumber.runner.runner@10683d9d]" started-at="2025-08-07T05:37:15 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-07T05:37:47 ICT" duration-ms="31916" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,57 +34,14 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for seleniumPageFactory.pages.dashboardPages$$Lambda$906/0x00000008012b6668@6f012914 (tried for 5 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for seleniumPageFactory.pages.dashboardPages$$Lambda$906/0x00000008012b6668@6f012914 (tried for 5 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at seleniumPageFactory.pages.dashboardPages.doSearch(dashboardPages.java:18)
-at seleniumPageFactory.cucumber.definitions.checkoutE2E.searchProduct(checkoutE2E.java:51)
-at ✽.Search product with keyword "ZARA COAT 3" for checkout flow(file:///C:/Users/Akbar/Downloads/Selenium-AfterOffice/src/test/resources/pageFactory/checkout.feature:10)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//section[@id='sidebar']//descendant::input[@name='search']"}
-  (Session info: chrome=138.0.7204.184)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [252b516d7f4a3700b0e590202127f248, findElement {using=xpath, value=//section[@id='sidebar']//descendant::input[@name='search']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\Akbar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51561}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51561/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 252b516d7f4a3700b0e590202127f248
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy21.isDisplayed(Unknown Source)
-at seleniumPageFactory.pages.dashboardPages.lambda$doSearch$0(dashboardPages.java:18)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 3 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:seleniumPageFactory.cucumber.runner.runner@10683d9d]" started-at="2025-08-07T05:01:20 ICT" name="tearDownClass" finished-at="2025-08-07T05:01:20 ICT" duration-ms="206" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:seleniumPageFactory.cucumber.runner.runner@10683d9d]" started-at="2025-08-07T05:37:47 ICT" name="tearDownClass" finished-at="2025-08-07T05:37:47 ICT" duration-ms="158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="after_suite()[pri:0, instance:seleniumPageFactory.cucumber.runner.runner@10683d9d]" started-at="2025-08-07T05:01:20 ICT" name="after_suite" finished-at="2025-08-07T05:01:21 ICT" duration-ms="740" status="PASS">
+        <test-method is-config="true" signature="after_suite()[pri:0, instance:seleniumPageFactory.cucumber.runner.runner@10683d9d]" started-at="2025-08-07T05:37:47 ICT" name="after_suite" finished-at="2025-08-07T05:37:48 ICT" duration-ms="492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after_suite -->

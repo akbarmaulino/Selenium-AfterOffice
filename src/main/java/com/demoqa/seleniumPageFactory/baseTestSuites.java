@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.demoqa.constant.env;
+import com.demoqa.constant.Env;
 
 public abstract class baseTestSuites {
     public WebDriver driver;
@@ -15,7 +15,7 @@ public abstract class baseTestSuites {
 
     public void setUp(){
         System.out.println("Initializing the base page...");
-        env config = new env();
+        Env config = new Env();
         System.setProperty("webdriver.chrome.driver", config.driverPath);
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));

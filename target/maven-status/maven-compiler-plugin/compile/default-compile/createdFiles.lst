@@ -1,4 +1,8 @@
+com\demoqa\seleniumPageFactory\baseTestSuites.class
 com\demoqa\website\RequestLogin.class
+com\demoqa\seleniumPageFactory\baseObject.class
 com\demoqa\website\RequestEmployee.class
 com\demoqa\website\EmployeeModel.class
+com\demoqa\seleniumPageFactory\basePage.class
+com\demoqa\constant\Env.class
 com\demoqa\website\ResponseEmployee.class

@@ -1,4 +1,0 @@
-# Created at 2025-08-04T14:25:47.994
-
-selenium.E2EWebsite.verifyOrderCreated() depends on nonexistent method doPlaceOrder
-

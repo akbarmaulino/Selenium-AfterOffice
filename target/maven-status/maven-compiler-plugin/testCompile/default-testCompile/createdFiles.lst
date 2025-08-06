@@ -26,6 +26,7 @@ selenium\ForgotPassword.class
 seleniumPageFactory\pages\checkoutPages.class
 seleniumPageFactory\cucumber\runner\runner.class
 cucumber\runner\cucumberRunner.class
+seleniumPageFactory\cucumber\definitions\hook.class
 converter\LoginEmployeeWithSerilize.class
 seleniumPageFactory\testSuites\E2ECheckout.class
 seleniumPageFactory\objectRepository\loginObject.class

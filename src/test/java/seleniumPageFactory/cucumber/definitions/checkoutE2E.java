@@ -33,7 +33,10 @@ public class checkoutE2E {
     }
 
     @When("Input email {string} and password {string} in login page for checkout flow")
-    public void inputEmailAndPassword(String email, String password) {
+    public void inputEmailAndPassword(String email, String password) throws InterruptedException {
+        // loginPage.fillEmail(System.getProperty("email"));
+        // Thread.sleep(2000); // Wait for email to be filled
+
         loginPage.fillEmail(email);
         loginPage.fillPassword(password);
     }

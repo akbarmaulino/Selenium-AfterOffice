@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Cucumber_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Cucumber Test Suite</span>
+              <span class="suite-name border-failed">Cucumber Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Cucumber_Test_Suite" class="hide-methods passed suite-Cucumber_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Cucumber_Test_Suite -->
-                      <a href="#" panel-name="suite-Cucumber_Test_Suite" class="show-methods passed suite-Cucumber_Test_Suite"> (show)</a> <!-- show-methods passed suite-Cucumber_Test_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Cucumber_Test_Suite" class="hide-methods failed suite-Cucumber_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Cucumber_Test_Suite -->
+                      <a href="#" panel-name="suite-Cucumber_Test_Suite" class="show-methods failed suite-Cucumber_Test_Suite"> (show)</a> <!-- show-methods failed suite-Cucumber_Test_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Cucumber_Test_Suite">
+                    <div class="method-list-content failed suite-Cucumber_Test_Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Cucumber_Test_Suite" title="seleniumPageFactory.cucumber.runner.runner" class="method navigator-link" hash-for-method="runScenario(&quot;&quot;, &quot;Checkout Flow&quot;)">runScenario("", "Checkout Flow")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Cucumber_Test_Suite -->
+                    </div> <!-- method-list-content failed suite-Cucumber_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,9 +118,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Cucumber_Test_Suite" class="panel Cucumber_Test_Suite">
-          <div class="suite-Cucumber_Test_Suite-class-passed">
+          <div class="suite-Cucumber_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">seleniumPageFactory.cucumber.runner.runner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,12 +130,46 @@
                   </a> <!-- runScenario("", "Checkout Flow") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("","Checkout Flow")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for seleniumPageFactory.pages.dashboardPages$$Lambda$906/0x00000008012b6668@6f012914 (tried for 5 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at seleniumPageFactory.pages.dashboardPages.doSearch(dashboardPages.java:18)
+	at seleniumPageFactory.cucumber.definitions.checkoutE2E.searchProduct(checkoutE2E.java:51)
+	at ✽.Search product with keyword &quot;ZARA COAT 3&quot; for checkout flow(file:///C:/Users/Akbar/Downloads/Selenium-AfterOffice/src/test/resources/pageFactory/checkout.feature:10)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//section[@id=&apos;sidebar&apos;]//descendant::input[@name=&apos;search&apos;]&quot;}
+  (Session info: chrome=138.0.7204.184)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [252b516d7f4a3700b0e590202127f248, findElement {using=xpath, value=//section[@id=&apos;sidebar&apos;]//descendant::input[@name=&apos;search&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\Akbar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51561}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51561/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 252b516d7f4a3700b0e590202127f248
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.isDisplayed(Unknown Source)
+	at seleniumPageFactory.pages.dashboardPages.lambda$doSearch$0(dashboardPages.java:18)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 3 more
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Cucumber_Test_Suite-class-passed -->
+          </div> <!-- suite-Cucumber_Test_Suite-class-failed -->
         </div> <!-- panel Cucumber_Test_Suite -->
         <div panel-name="test-xml-Cucumber_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -200,12 +234,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'seleniumPageFactory.cucumber.runner.runner')
-data.setCell(0, 3, 44525);
+data.setCell(0, 3, 15761);
 window.suiteTableData['Cucumber_Test_Suite']= { tableData: data, tableDiv: 'times-div-Cucumber_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 44 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Cucumber_Test_Suite">
               </div> <!-- times-div-Cucumber_Test_Suite -->
             </div> <!-- times-div -->
@@ -233,20 +267,22 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">seleniumPageFactory.cucumber.runner.runner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@52559a69)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@2a235b8e)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("", "Checkout Flow")</span>
-                <span class="method-start">165 ms</span>
+                <span class="method-start">151 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">44700 ms</span>
+                <span class="method-start">15919 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">after_suite</span>
-                <span class="method-start">45072 ms</span>
+                <span class="method-start">16156 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

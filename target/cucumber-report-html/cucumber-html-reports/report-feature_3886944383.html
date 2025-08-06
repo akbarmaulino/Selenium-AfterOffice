@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>CucumberProject</td>
-      <td>06 Aug 2025, 20:33</td>
+      <td>07 Aug 2025, 05:01</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Checkout Flow</td>
-          <td      class="passed"    >13</td>
-          <td >0</td>
-          <td >0</td>
+          <td      class="passed"    >4</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >8</td>
           <td >0</td>
           <td >0</td>
           <td class="total">13</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="42831951800">42.831</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="14698376400">14.698</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -171,7 +171,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">Checkout Flow</span>
 
@@ -189,7 +189,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">18.031</span>
+  <span class="lead-duration duration">2.320</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -232,7 +232,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Open <span class="argument">&quot;https://rahulshettyacademy.com/client&quot;</span></span>
 
-  <span class="lead-duration duration">18.006</span>
+  <span class="lead-duration duration">2.300</span>
 
 </div>
 
@@ -259,7 +259,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">Init all pages for run automation for checkout flow</span>
 
-  <span class="lead-duration duration">0.024</span>
+  <span class="lead-duration duration">0.019</span>
 
 </div>
 
@@ -297,12 +297,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">24.800</span>
+  <span class="lead-duration duration">12.377</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-3">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name"></span>
 
@@ -313,7 +313,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-3" class="collapse collapsable-details ">
+  <div id="element-3" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
@@ -335,7 +335,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">seleniumPageFactory.cucumber.definitions.hook.beforeScenario()</span>
 
-  <span class="lead-duration duration">0.884</span>
+  <span class="lead-duration duration">0.849</span>
 
           </div>
 
@@ -352,9 +352,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -364,7 +364,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details ">
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -372,7 +372,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">Input email <span class="argument">&quot;simanjuntakalbert57@gmail.com&quot;</span> and password <span class="argument">&quot;XBf@rWNvByn!#K8&quot;</span> in login page for checkout flow</span>
 
-  <span class="lead-duration duration">0.179</span>
+  <span class="lead-duration duration">2.249</span>
 
 </div>
 
@@ -399,7 +399,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Click login button for checkout flow</span>
 
-  <span class="lead-duration duration">0.076</span>
+  <span class="lead-duration duration">0.064</span>
 
 </div>
 
@@ -422,11 +422,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">Search product with keyword <span class="argument">&quot;ZARA COAT 3&quot;</span> for checkout flow</span>
 
-  <span class="lead-duration duration">2.360</span>
+  <span class="lead-duration duration">10.063</span>
 
 </div>
 
@@ -434,6 +434,52 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>org.openqa.selenium.TimeoutException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for seleniumPageFactory.pages.dashboardPages$$Lambda$906/0x00000008012b6668@6f012914 (tried for 5 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at seleniumPageFactory.pages.dashboardPages.doSearch(dashboardPages.java:18)
+	at seleniumPageFactory.cucumber.definitions.checkoutE2E.searchProduct(checkoutE2E.java:51)
+	at &#10045;.Search product with keyword &quot;ZARA COAT 3&quot; for checkout flow(file:///C:/Users/Akbar/Downloads/Selenium-AfterOffice/src/test/resources/pageFactory/checkout.feature:10)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//section[@id='sidebar']//descendant::input[@name='search']&quot;}
+  (Session info: chrome=138.0.7204.184)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [252b516d7f4a3700b0e590202127f248, findElement {using=xpath, value=//section[@id='sidebar']//descendant::input[@name='search']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\Akbar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51561}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51561/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 252b516d7f4a3700b0e590202127f248
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.isDisplayed(Unknown Source)
+	at seleniumPageFactory.pages.dashboardPages.lambda$doSearch$0(dashboardPages.java:18)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 3 more
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -449,11 +495,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">Click view product for checkout flow</span>
 
-  <span class="lead-duration duration">2.092</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -476,11 +522,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">Verify product name, to make sure the product <span class="argument">&quot;ZARA COAT 3&quot;</span> is shown for checkout flow</span>
 
-  <span class="lead-duration duration">2.028</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -503,11 +549,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">Click ATC button for checkout flow</span>
 
-  <span class="lead-duration duration">5.200</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -530,11 +576,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">Click checkout button for checkout flow</span>
 
-  <span class="lead-duration duration">2.142</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -557,11 +603,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">Enter the details payment for checkout flow</span>
 
-  <span class="lead-duration duration">2.564</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -584,11 +630,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">Click place order button for checkout flow</span>
 
-  <span class="lead-duration duration">2.092</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -611,11 +657,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">Verify order, to make sure <span class="argument">&quot;ZARA COAT 3&quot;</span> successfully ordered</span>
 
-  <span class="lead-duration duration">4.054</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -638,11 +684,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">Delay for <span class="argument">2</span> seconds</span>
 
-  <span class="lead-duration duration">2.007</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -669,7 +715,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-6">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -681,13 +727,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-6" class="inner-level collapse collapsable-details ">
+    <div id="after-7" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">seleniumPageFactory.cucumber.definitions.hook.afterScenario()</span>
 
-  <span class="lead-duration duration">0.722</span>
+  <span class="lead-duration duration">0.127</span>
 
           </div>
 

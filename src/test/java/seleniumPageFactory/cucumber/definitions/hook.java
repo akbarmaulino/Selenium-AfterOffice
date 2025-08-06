@@ -1,5 +1,6 @@
 package seleniumPageFactory.cucumber.definitions;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 
@@ -7,8 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.demoqa.constant.Env;
+
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -17,13 +21,33 @@ public class hook {
     public static WebDriver driver;
     public static Wait<WebDriver> wait;
 
+    Logger hookLogger = LoggerFactory.getLogger(hook.class);
+
     @Before
     public void beforeScenario() throws IOException {
-        System.out.println("beforeScenario");
-        Env config = new Env();
+         System.out.println("beforeScenario");
 
-        System.setProperty("webdriver.chrome.driver", config.driverPath);
+        String env = System.getProperty("env") == null ? "staging" : System.getProperty("env");
+        System.out.println("env: " + env);
+        if (!env.equals("staging") && !env.equals("production")) {
+            env = "staging";
+        }
 
+        String currentWorkingDirectory = System.getProperty("user.dir");
+        System.out.println("Current Directory = " + currentWorkingDirectory);
+        FileInputStream fileInputStream = new FileInputStream(
+            currentWorkingDirectory + "/src/test/resources/pageFactory/" + env + ".properties");
+
+        System.getProperties().load(fileInputStream);
+        System.out.println(System.getProperty("browser"));
+        System.out.println(System.getProperty("env"));
+        System.out.println(System.getProperty("suiteXml"));
+
+        if (System.getProperty("browser").equals("chrome")) {
+            System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + Env.driverPath);
+        } else {
+            //
+        }
 
         hook.driver = new ChromeDriver();
         hook.wait = new WebDriverWait(hook.driver, Duration.ofSeconds(5));

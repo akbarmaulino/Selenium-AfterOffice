@@ -13,6 +13,6 @@ public class generalDefinition {
     }
     @Then("Delay for {int} seconds")
     public void doCheckoutFlow(int sec) throws InterruptedException {
-        Thread.sleep(Duration.ofSeconds(sec));
+        Thread.sleep(2000);
     }
 }

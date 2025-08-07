@@ -1,6 +1,5 @@
 package seleniumPageFactory.testSuites;
 
-import java.time.Duration;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -41,24 +40,24 @@ public class E2ECheckout extends baseTestSuites {
         loginPage.fillEmail("simanjuntakalbert57@gmail.com");
         loginPage.fillPassword("XBf@rWNvByn!#K8");
         loginPage.clickLoginButton();
-        Thread.sleep(Duration.ofSeconds(2));
+        Thread.sleep(2000);
         dashboardPage.doSearch("ZARA COAT 3");
         dashboardPage.clickButtonViewProduct();
-        Thread.sleep(Duration.ofSeconds(2));
+        Thread.sleep(2000);
         productDisplayPage.verifyDataProduct("ZARA COAT 3");
         productDisplayPage.clickATCButton();
-        Thread.sleep(Duration.ofSeconds(2));
+        Thread.sleep(2000);
         cartPage.clickButtonCheckout();
-        Thread.sleep(Duration.ofSeconds(2));
+        Thread.sleep(2000);
         checkoutPage.enterCVV();
         checkoutPage.enterNameCard();
         checkoutPage.enterCountry();
         checkoutPage.clickRecomendationCountry();
         checkoutPage.clickPlaceOrder();
-        Thread.sleep(Duration.ofSeconds(2));
+        Thread.sleep(2000);
         // action order page
 
-        Thread.sleep(Duration.ofSeconds(2));
+        Thread.sleep(2000);
     }
 
     @AfterSuite

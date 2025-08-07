@@ -1,6 +1,5 @@
 package seleniumPageFactory.pages;
 
-import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Wait;
@@ -18,7 +17,7 @@ public class orderPages extends basePage {
     }
 
     public void verifyOrderCreated(String productName) throws InterruptedException {
-        Thread.sleep(Duration.ofSeconds(2));
+        Thread.sleep((2000));
 
         // Boolean elementIsPresentProductName = wait.until(d -> orderObject.titleProductDynamic(productName).isDisplayed());
         // Assert.assertTrue(elementIsPresentProductName, "element title product not present");

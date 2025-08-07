@@ -1,6 +1,5 @@
 package seleniumPageFactory.pages;
 
-import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Wait;
@@ -27,7 +26,7 @@ public class productDisplayPage extends basePage {
         wait.until(d -> productDisplayObject.buttonAddToCart.isDisplayed());
         productDisplayObject.buttonAddToCart.click();
 
-        Thread.sleep(Duration.ofSeconds(3));
+        Thread.sleep(3000);
 
         wait.until(d -> productDisplayObject.labelCart.isDisplayed());
         if (productDisplayObject.labelCart.getText().equals("1")) {

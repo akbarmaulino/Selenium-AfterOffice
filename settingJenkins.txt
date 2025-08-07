@@ -1,0 +1,28 @@
+Buatkan saya Jenkins declarative pipeline (Jenkinsfile) untuk dijalankan di Windows, dengan detail sebagai berikut:
+
+### 🔹 Build Stage
+- Clone repository: <REPO_BUILD>
+- Checkout branch: <BRANCH_BUILD>
+- Jika folder sudah ada, lakukan `git pull`
+- Masuk ke folder: <FOLDER_BUILD>
+- Compile file Java: `javac HelloWord.java`
+
+### 🔹 Test Stage
+- Clone repository: <REPO_TEST>
+- Checkout branch: <BRANCH_TEST>
+- Jika folder sudah ada, lakukan `git pull`
+- Masuk ke folder: <FOLDER_TEST>
+- Jalankan perintah:
+  - `mvn install -DskipTests`
+  - `mvn test -Dtestng.xml=src/test/resources/pageFactory/runner_cucumber.xml`
+  - `mvn test -Dtestng.xml=src/test/resources/pageFactory/runner_cucumber.xml -Denv=production`
+
+### 🔹 Deployment Stage
+- Masuk ke folder: <FOLDER_DEPLOY>
+- Jalankan: `java HelloWord`
+
+### 📝 Catatan:
+- Gunakan deklarasi `pipeline {}` (Jenkins declarative syntax)
+- Gunakan `bat` command untuk semua perintah karena ini dijalankan di Windows
+- Pastikan pengecekan `fileExists` sebelum clone repo
+- Tambahkan `bat 'dir'` di setiap `dir()` sebagai debug jika perlu

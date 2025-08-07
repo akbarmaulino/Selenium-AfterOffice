@@ -26,3 +26,5 @@ Buatkan saya Jenkins declarative pipeline (Jenkinsfile) untuk dijalankan di Wind
 - Gunakan `bat` command untuk semua perintah karena ini dijalankan di Windows
 - Pastikan pengecekan `fileExists` sebelum clone repo
 - Tambahkan `bat 'dir'` di setiap `dir()` sebagai debug jika perlu
+
+Tamabahan Cek Del Soon

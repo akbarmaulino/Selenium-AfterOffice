@@ -1,0 +1,25 @@
+name: QA Test Runner
+
+on:
+  repository_dispatch:
+    types: [run-qa]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+    - name: ✅ Checkout QA Repo
+      uses: actions/checkout@v4
+
+    - name: 🔹 Install dependencies
+      run: |
+        mvn install -DskipTests
+      shell: cmd
+
+    - name: 🔹 Run tests (default env)
+      run: |
+        mvn test -Dtestng.xml=src/test/resources/pageFactory/runner_cucumber.xml
+      shell: cmd
+

@@ -23,7 +23,31 @@ jobs:
       run: mvn install -DskipTests
       shell: bash
 
-    - name: 🔹 Run tests (default env)
-      run: mvn test -Dtestng.xml=src/test/resources/pageFactory/runner_cucumber.xml
+    - name: 🔹 Run tests (default env - Chrome Headless)
+      run: |
+        mvn test "-Dbrowser=chrome" "-Dheadless=true" "-Dtestng.xml=src/test/resources/pageFactory/runner_cucumber.xml"
       shell: bash
 
+    - name: 📁 Ensure jsonReports folder exists
+      run: |
+        if [ ! -d "target/jsonReports" ]; then
+          mkdir -p target/jsonReports
+        fi
+      shell: bash
+
+    - name: 📄 Generate HTML Report from JSON
+      run: mvn verify "-DgenerateReports=false"
+      shell: bash
+
+    - name: 🔍 Debug report output
+      run: |
+        echo "Checking jsonReports folder..."
+        ls -la target/jsonReports || echo "Folder jsonReports not found"
+
+        echo "Checking generated JSON file..."
+        if [ -f "target/jsonReports/cucumber.json" ]; then
+          cat target/jsonReports/cucumber.json
+        else
+          echo "JSON file not found"
+        fi
+      shell: bash

@@ -7,18 +7,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.demoqa.constant.Env;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public abstract class baseTestSuites {
     public WebDriver driver;
     public Wait<WebDriver> wait;
 
-    public void setUp(){
+
+
+    public void setUp() {
         System.out.println("Initializing the base page...");
-        System.setProperty("webdriver.chrome.driver", Env.driverPath);
+        WebDriverManager.chromedriver().setup(); // otomatis download & set driver
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
+
 
     public void setupURL(String url) {
         driver.get(url);

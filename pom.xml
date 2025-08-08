@@ -94,6 +94,13 @@
             <artifactId>slf4j-api</artifactId>
             <version>2.0.17</version>
         </dependency> 
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.8.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -105,7 +112,7 @@
             <version>3.5.3</version>
             <configuration>
                 <suiteXmlFiles>
-                <suiteXmlFile>${testng.xml}</suiteXmlFile>
+                <suiteXmlFile>runner.xml</suiteXmlFile>
                 </suiteXmlFiles>
                 <testFailureIgnore>true</testFailureIgnore>
             </configuration>
@@ -116,6 +123,9 @@
             <groupId>net.masterthought</groupId>
             <artifactId>maven-cucumber-reporting</artifactId>
             <version>5.7.0</version>
+            <configuration>
+                <skip>${generateReports}</skip> <!-- PENTING: DI SINI! -->
+            </configuration>
             <executions>
                 <execution>
                     <id>execution</id>

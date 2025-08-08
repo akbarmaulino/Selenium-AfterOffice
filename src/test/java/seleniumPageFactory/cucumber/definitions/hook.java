@@ -17,6 +17,7 @@ import com.demoqa.constant.Env;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class hook {
     public static WebDriver driver;
@@ -26,7 +27,7 @@ public class hook {
 
     @Before
     public void beforeScenario() throws IOException {
-         System.out.println("beforeScenario");
+        System.out.println("beforeScenario");
 
         String env = System.getProperty("env") == null ? "staging" : System.getProperty("env");
         System.out.println("env: " + env);
@@ -45,25 +46,22 @@ public class hook {
         System.out.println(System.getProperty("suiteXml"));
 
         if (System.getProperty("browser").equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + Env.driverPath);
+            // ✅ Gunakan WebDriverManager, hilangkan manual path
+            WebDriverManager.chromedriver().setup();
+
             ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless=new");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
 
-            options.addArguments("--headless=new"); // Gunakan new headless mode
-            options.addArguments("--window-size=1920,1080"); // Viewport besar supaya elemen tidak ketutup
-            options.addArguments("--disable-gpu"); // Aman untuk CI server
-            options.addArguments("--no-sandbox"); // Aman untuk container
-            options.addArguments("--disable-dev-shm-usage"); // Aman untuk container
             hook.driver = new ChromeDriver(options);
-
-
         } else {
-            //
+            // Tambahkan inisialisasi browser lain kalau ada
         }
 
-        // hook.driver = new ChromeDriver();
         hook.wait = new WebDriverWait(hook.driver, Duration.ofSeconds(5));
-
-        // throw new Error("this sample of error");
     }
 
     @After

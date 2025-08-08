@@ -42,6 +42,7 @@ public class E2ECheckout extends baseTestSuites {
         loginPage.clickLoginButton();
         Thread.sleep(2000);
         dashboardPage.doSearch("ZARA COAT 3");
+        Thread.sleep(2000);
         dashboardPage.clickButtonViewProduct();
         Thread.sleep(2000);
         productDisplayPage.verifyDataProduct("ZARA COAT 3");

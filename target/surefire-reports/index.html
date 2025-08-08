@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Runner1" class="navigator-link">
-              <span class="suite-name border-failed">Runner1</span>
+              <span class="suite-name border-passed">Runner1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Runner1" class="hide-methods failed suite-Runner1"> (hide)</a> <!-- hide-methods failed suite-Runner1 -->
-                      <a href="#" panel-name="suite-Runner1" class="show-methods failed suite-Runner1"> (show)</a> <!-- show-methods failed suite-Runner1 -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Runner1" class="hide-methods passed suite-Runner1"> (hide)</a> <!-- hide-methods passed suite-Runner1 -->
+                      <a href="#" panel-name="suite-Runner1" class="show-methods passed suite-Runner1"> (show)</a> <!-- show-methods passed suite-Runner1 -->
                     </span>
-                    <div class="method-list-content failed suite-Runner1">
+                    <div class="method-list-content passed suite-Runner1">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Runner1" title="seleniumPageFactory.testSuites.E2ECheckout" class="method navigator-link" hash-for-method="doCheckoutFlow">doCheckoutFlow</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Runner1 -->
+                    </div> <!-- method-list-content passed suite-Runner1 -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,9 +118,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Runner1" class="panel Runner1">
-          <div class="suite-Runner1-class-failed">
+          <div class="suite-Runner1-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">seleniumPageFactory.testSuites.E2ECheckout</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -129,40 +129,10 @@
                   <a name="doCheckoutFlow">
                   </a> <!-- doCheckoutFlow -->
                   <span class="method-name">doCheckoutFlow</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: chrome=138.0.7204.184)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [476fcfc1c41704704f5258b11499149d, clickElement {id=f.F3318527FAC1614545A58A3D89FE578A.d.1B39DAF7D99AEF543F62289C5B0926B3.e.85}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\YANTRI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53666}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53666/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (476fcfc1c41704704f5258b11499149d)] -&gt; xpath: //section[@id=&apos;products&apos;]//descendant::button[contains(text(), &apos;View&apos;)]]
-Session ID: 476fcfc1c41704704f5258b11499149d
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
-	at seleniumPageFactory.pages.dashboardPages.clickButtonViewProduct(dashboardPages.java:25)
-	at seleniumPageFactory.testSuites.E2ECheckout.doCheckoutFlow(E2ECheckout.java:45)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 22 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Runner1-class-failed -->
+          </div> <!-- suite-Runner1-class-passed -->
         </div> <!-- panel Runner1 -->
         <div panel-name="test-xml-Runner1" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -222,12 +192,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'doCheckoutFlow')
 data.setCell(0, 2, 'seleniumPageFactory.testSuites.E2ECheckout')
-data.setCell(0, 3, 4444);
+data.setCell(0, 3, 21507);
 window.suiteTableData['Runner1']= { tableData: data, tableDiv: 'times-div-Runner1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-Runner1">
               </div> <!-- times-div-Runner1 -->
             </div> <!-- times-div -->
@@ -259,14 +229,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">doCheckoutFlow</span>
-                <span class="method-start">5744 ms</span>
+                <span class="method-start">48289 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">10307 ms</span>
+                <span class="method-start">69821 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

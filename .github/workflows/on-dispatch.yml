@@ -20,7 +20,7 @@ jobs:
         java-version: '17'
 
     - name: 🔹 Install dependencies
-      run: mvn install -DskipTests
+      run:  mvn clean install "-DskipTests=true" "-Dskip.cucumber.report=true"
       shell: bash
 
     - name: 🔹 Run tests (default env - Chrome Headless)

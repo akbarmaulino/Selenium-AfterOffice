@@ -117,31 +117,25 @@
                 <testFailureIgnore>true</testFailureIgnore>
             </configuration>
         </plugin>
-
-        <!-- Cucumber Reporting Plugin (Versi 5.7.0) -->
         <plugin>
             <groupId>net.masterthought</groupId>
             <artifactId>maven-cucumber-reporting</artifactId>
             <version>5.7.0</version>
-            <configuration>
-                <skip>${generateReports}</skip> <!-- PENTING: DI SINI! -->
-            </configuration>
             <executions>
                 <execution>
-                    <id>execution</id>
-                    <phase>verify</phase>
-                    <goals>
-                        <goal>generate</goal>
-                    </goals>
-                    <configuration>
-                        <projectName>Demo QA Website</projectName>
-                        <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
-                        <inputDirectory>${project.build.directory}/jsonReports</inputDirectory>
-                        <jsonFiles>
-                            <param>**/*.json</param>
-                        </jsonFiles>
-                        <checkBuildResult>false</checkBuildResult>
-                    </configuration>
+                <id>generate-cucumber-report</id>
+                <phase>verify</phase> <!-- ubah dari install -->
+                <goals>
+                    <goal>generate</goal>
+                </goals>
+                <configuration>
+                    <skip>${skip.cucumber.report}</skip> <!-- ini variabelnya -->
+                    <projectName>demoqawebsite</projectName>
+                    <outputDirectory>${project.build.directory}/cucumber-report</outputDirectory>
+                    <jsonFiles>
+                    <param>${project.build.directory}/jsonReports/cucumber.json</param>
+                    </jsonFiles>
+                </configuration>
                 </execution>
             </executions>
         </plugin>

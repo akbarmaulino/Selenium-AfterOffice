@@ -4,6 +4,15 @@ on:
   repository_dispatch:
     types: [run-qa]
   workflow_dispatch:
+    inputs:
+      browser:
+        description: 'Browser to run (chrome/firefox)'
+        required: false
+        default: 'chrome'
+      headless:
+        description: 'Run in headless mode? (true/false)'
+        required: false
+        default: 'true'
 
 jobs:
   test:
@@ -23,9 +32,11 @@ jobs:
       run: mvn install -DskipTests
       shell: bash
 
-    - name: 🔹 Run tests (default env - Chrome Headless)
+    - name: 🔹 Run tests
       run: |
-        mvn test "-Dbrowser=chrome" "-Dheadless=true" "-Dtestng.xml=src/test/resources/pageFactory/runner_cucumber.xml"
+        mvn test "-Dbrowser=${{ github.event.inputs.browser || 'chrome' }}" \
+                 "-Dheadless=${{ github.event.inputs.headless || 'true' }}" \
+                 "-Dtestng.xml=src/test/resources/pageFactory/runner_cucumber.xml"
       shell: bash
 
     - name: 📁 Ensure jsonReports folder exists

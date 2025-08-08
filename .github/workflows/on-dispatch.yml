@@ -4,15 +4,6 @@ on:
   repository_dispatch:
     types: [run-qa]
   workflow_dispatch:
-    inputs:
-      browser:
-        description: 'Browser to run (chrome/firefox)'
-        required: false
-        default: 'chrome'
-      headless:
-        description: 'Run in headless mode? (true/false)'
-        required: false
-        default: 'true'
 
 jobs:
   test:
@@ -32,30 +23,38 @@ jobs:
       run: mvn install -DskipTests
       shell: bash
 
-    - name: 🔹 Run tests
+    - name: 🔹 Run tests (default env - Chrome Headless)
       run: |
-        mvn test "-Dbrowser=${{ github.event.inputs.browser || 'chrome' }}" \
-                 "-Dheadless=${{ github.event.inputs.headless || 'true' }}" \
-                 "-Dtestng.xml=src/test/resources/pageFactory/runner_cucumber.xml"
+        mvn test "-Dbrowser=chrome" "-Dheadless=true" "-Dtestng.xml=src/test/resources/pageFactory/runner_cucumber.xml"
       shell: bash
 
-    - name: 📁 Ensure jsonReports folder exists
+    - name: 📁 Check & ensure jsonReports folder exists
       run: |
         if [ ! -d "target/jsonReports" ]; then
-          mkdir -p target/jsonReports
+          echo "❌ Folder target/jsonReports belum terbentuk dari hasil test!"
+        else
+          echo "✅ Folder target/jsonReports ditemukan."
         fi
       shell: bash
 
-    - name: 📄 Generate HTML Report from JSON
+    - name: ⚠️ Warn if cucumber.json missing
+      run: |
+        if [ ! -f target/jsonReports/cucumber.json ]; then
+          echo "⚠️ WARNING: cucumber.json tidak ditemukan. HTML report tidak akan dibuat."
+        fi
+      shell: bash
+
+    - name: 📄 Generate HTML Report from JSON (only if JSON exists)
+      if: success() && hashFiles('target/jsonReports/cucumber.json') != ''
       run: mvn verify "-DgenerateReports=false"
       shell: bash
 
     - name: 🔍 Debug report output
       run: |
-        echo "Checking jsonReports folder..."
+        echo "📁 Isi folder target/jsonReports:"
         ls -la target/jsonReports || echo "Folder jsonReports not found"
 
-        echo "Checking generated JSON file..."
+        echo "📄 Isi file cucumber.json:"
         if [ -f "target/jsonReports/cucumber.json" ]; then
           cat target/jsonReports/cucumber.json
         else

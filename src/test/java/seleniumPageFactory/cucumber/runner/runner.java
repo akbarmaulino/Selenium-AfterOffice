@@ -8,13 +8,19 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
     features = "src/test/resources/pageFactory",
     glue = "seleniumPageFactory.cucumber.definitions",
-    plugin = {"pretty", "json:target/jsonReports/cucumber.json"},
+    plugin = {
+        "pretty",
+        "json:target/jsonReports/cucumber.json",
+        "json:target/cucumber.json"
+    },
     monochrome = true
 )
 public class runner extends AbstractTestNGCucumberTests {
     @AfterSuite
     public void after_suite() {
+        System.out.println("Generating Cucumber Report...");
         GenerateReport.generateReport();
     }
 }
+
 

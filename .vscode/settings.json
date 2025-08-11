@@ -1,5 +1,5 @@
 {
     "java.configuration.updateBuildConfiguration": "automatic",
-    "livePreview.defaultPreviewPath": "/target/cucumber-reports.html",
+    "livePreview.defaultPreviewPath": "/target/surefire-reports/index.html",
     "java.compile.nullAnalysis.mode": "automatic"
 }
